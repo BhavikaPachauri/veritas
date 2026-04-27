@@ -1,8 +1,7 @@
 
 import './App.css'
-import BacktoTop from './common/BacktoTop'
+import MainRoutes from './common/MainRoutes'
 
-import MainRoute from './common/MainRoute'
 
 
 
@@ -10,9 +9,8 @@ function App() {
 
   return (
     <>
-    
-      <BacktoTop />
-      <MainRoute />
+    <MainRoutes/>
+      
     </>
   )
 }

@@ -1,395 +1,102 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import Btn from "./Btn";
-import { SITE_CONFIG } from "./siteConfig";
+import React from "react";
 
-const companyLinks = [
-  { label: "Home", to: "/" },
-  { label: "About Us", to: "/about-us" },
-  { label: "Services", to: "/services" },
-  { label: "Partners", to: "/partners" },
-  { label: "Contact Us", to: "/contact-us" },
-];
+const Footer: React.FC = () => {
+    return (
+        <footer className="bg-[#071a2f] text-white archivo">
 
-const serviceHighlights = [
-  "Wholesale distribution",
-  "Hospital supply support",
-  "Retail pharmacy fulfillment",
-  "Reliable last-mile coordination",
-];
+            {/* Top Section */}
+            <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 
+                grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
 
-const socialLinks = [
-  {
-    href: SITE_CONFIG.socialLinks.linkedin,
-    label: "LinkedIn",
-    icon: LinkedInIcon,
-  },
-  {
-    href: SITE_CONFIG.socialLinks.instagram,
-    label: "Instagram",
-    icon: InstagramIcon,
-  },
-  {
-    href: SITE_CONFIG.socialLinks.whatsapp,
-    label: "WhatsApp",
-    icon: WhatsAppIcon,
-  },
-];
+                {/* Column 1 */}
+                <div>
+                    <h3 className="text-sm font-medium mb-3">World Offices</h3>
+                    <p className="text-xs text-gray-400">
+                        Essex, United Kingdom
+                    </p>
+                </div>
 
-const linkClassName =
-  "text-sm text-[#b5d6d0] transition-colors duration-200 hover:text-white";
+                {/* Right Side */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
-const Footer = () => {
-  const year = new Date().getFullYear();
-  const [visible, setVisible] = useState(false);
-  const footerRef = useRef<HTMLElement>(null);
+                    {/* Column 2 */}
+                    <div>
+                        <h3 className="text-sm font-medium mb-3">Expertise</h3>
+                        <ul className="space-y-2 text-xs text-gray-400">
+                            <li>Divorce</li>
+                            <li>Financial settlement</li>
+                            <li>Children custody</li>
+                            <li>Non-Molestation order</li>
+                        </ul>
+                    </div>
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-      },
-      { threshold: 0.1 }
-    );
+                    {/* Column 3 */}
+                    <div>
+                        <h3 className="text-sm font-medium mb-3">FAQ</h3>
+                        <ul className="space-y-2 text-xs text-gray-400">
+                            <li>How Do I Choose a Lawyer?</li>
+                            <li>What is Domestic Violence</li>
+                            <li>How is child custody determined?</li>
+                            <li>Do I need a personal Lawyer?</li>
+                            <li>Are you licensed in my country?</li>
+                        </ul>
+                    </div>
 
-    const node = footerRef.current;
-    if (node) observer.observe(node);
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <footer
-      ref={footerRef}
-      className="relative overflow-hidden border-t border-white/5"
-      style={{
-        background:
-          "linear-gradient(160deg, #071a14 0%, #0b1e1a 45%, #0d2420 100%)",
-      }}
-    >
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,181,165,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,181,165,0.04) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
-
-      <div
-        className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(0,181,165,0.14) 0%, transparent 72%)",
-        }}
-      />
-
-      <div
-        className="pointer-events-none absolute -bottom-16 -left-16 h-72 w-72 rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(138,196,63,0.12) 0%, transparent 72%)",
-        }}
-      />
-
-      <div className="relative border-b border-white/[0.08] py-10">
-        <div
-          className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-5 px-6 transition-all duration-700"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(18px)",
-          }}
-        >
-          <div>
-            <p className="mb-1.5 text-[12px] font-semibold uppercase tracking-[3px] text-[#8ac43f]">
-              Build With Medzy
-            </p>
-            <h2 className="font-heading text-[clamp(20px,3vw,30px)] font-bold tracking-tight text-white">
-              Advancing healthcare supply with speed and trust
-            </h2>
-          </div>
-
-          <Link to="/contact-us" className="inline-flex rounded-full">
-            <Btn
-              title="Get in Touch"
-              text="text-white"
-              bg="bg-[#00a9ae]"
-              border="border-[#00a9ae]"
-              hover="bg-[#8ac43f]"
-              as="span"
-            />
-          </Link>
-        </div>
-      </div>
-
-      <div className="relative mx-auto grid max-w-[1200px] gap-10 px-6 py-10 md:grid-cols-[1.3fr_0.9fr_0.9fr_1.1fr]">
-        <div
-          className="transition-all duration-700"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(22px)",
-            transitionDelay: "0.05s",
-          }}
-        >
-          <img
-            src="/img/MedzyLogo1.webp"
-            alt="Medzy Healthcare"
-            className="mb-4 h-auto w-[190px]"
-            loading="lazy"
-            width="190"
-            height="48"
-          />
-          <p className="max-w-md text-sm leading-7 text-[#b5d6d0]">
-            Medzy Healthcare helps manufacturers, hospitals, clinics, and
-            pharmacies stay connected through responsive pharmaceutical
-            distribution and dependable service.
-          </p>
-
-          <div className="mt-6 flex gap-3">
-            {socialLinks.map(({ href, label, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#d9f2ed] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#00b5a5] hover:bg-[#0b3b37]"
-              >
-                <Icon />
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <FooterColumn
-          title="Company"
-          visible={visible}
-          delay="0.12s"
-          content={
-            <ul className="flex list-none flex-col gap-3 p-0">
-              {companyLinks.map(({ label, to }) => (
-                <li key={to}>
-                  <Link to={to} className={linkClassName}>
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          }
-        />
-
-        <FooterColumn
-          title="Services"
-          visible={visible}
-          delay="0.2s"
-          content={
-            <ul className="flex list-none flex-col gap-3 p-0">
-              {serviceHighlights.map((item) => (
-                <li key={item} className="text-sm text-[#b5d6d0]">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          }
-        />
-
-        <FooterColumn
-          title="Contact"
-          visible={visible}
-          delay="0.28s"
-          content={
-            <div className="flex flex-col gap-4 text-sm text-[#b5d6d0]">
-              <a href={SITE_CONFIG.phoneHref} className="flex items-start gap-3 hover:text-white">
-                <PhoneIcon className="mt-0.5 text-[#8ac43f]" />
-                <span>{SITE_CONFIG.phoneDisplay}</span>
-              </a>
-
-              <a href={SITE_CONFIG.emailHref} className="flex items-start gap-3 hover:text-white">
-                <MailIcon className="mt-0.5 text-[#8ac43f]" />
-                <span>{SITE_CONFIG.email}</span>
-              </a>
-
-              <a
-                href={SITE_CONFIG.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 hover:text-white"
-              >
-                <MapPinIcon className="mt-0.5 shrink-0 text-[#8ac43f]" />
-                <address className="not-italic">
-                  {SITE_CONFIG.addressLines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </address>
-              </a>
+                </div>
             </div>
-          }
-        />
-      </div>
 
-      <div
-        className="relative mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-3 border-t border-white/[0.07] px-6 py-5 text-[12.5px] text-[#8cb9b1] transition-opacity duration-700"
-        style={{ opacity: visible ? 1 : 0, transitionDelay: "0.35s" }}
-      >
-        <p>{year} Medzy Healthcare Private Limited. All rights reserved.</p>
-        <p>Serving pharmaceutical distribution needs across India.</p>
-      </div>
-    </footer>
-  );
+            {/* Middle CTA */}
+            <div className="max-w-6xl mx-auto px-6 pb-10 
+                flex flex-col md:flex-row gap-4 md:gap-0 
+                justify-between items-start md:items-center">
+
+                <h2 className="text-md md:text-xl marcellus leading-snug max-w-md">
+                    HIRE ONE OF OUR PROFESSIONAL <br />
+                    LEGAL EXPERT NOW
+                </h2>
+
+                <p className="text-sm">
+                    Emergency Call{" "}
+                    <span className="text-[#BF9874]">907 683 8196</span>
+                </p>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="bg-[#cfd5dd] text-[#1a2a3a] text-xs py-3">
+                <div className="max-w-6xl mx-auto px-6 
+                    flex flex-col md:flex-row items-center 
+                    justify-between gap-3">
+
+                    <span>Privacy</span>
+
+                    <span className="text-center">
+                        Copyright DoctractiveMarket, All Rights Reserved
+                    </span>
+
+                    {/* Social Icons */}
+                    <div className="flex gap-3">
+                      
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.0703 0H2.92969C1.31439 0 0 1.31439 0 2.92969V17.0703C0 18.6856 1.31439 20 2.92969 20H8.82812V12.9297H6.48438V9.41406H8.82812V7.03125C8.82812 5.09262 10.4051 3.51562 12.3438 3.51562H15.8984V7.03125H12.3438V9.41406H15.8984L15.3125 12.9297H12.3438V20H17.0703C18.6856 20 20 18.6856 20 17.0703V2.92969C20 1.31439 18.6856 0 17.0703 0Z" fill="#667C99" />
+                        </svg>
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.8998 1.10018C18.1666 0.366771 17.2832 0 16.2503 0H3.75003C2.71712 0 1.83372 0.366771 1.10018 1.10018C0.366771 1.83372 0 2.71708 0 3.75003V16.2502C0 17.283 0.366771 18.1665 1.10018 18.9C1.83372 19.6336 2.71712 20.0003 3.75003 20.0003H16.2502C17.2831 20.0003 18.1665 19.6336 18.8997 18.9C19.6332 18.1665 20 17.2831 20 16.2502V3.75003C20 2.71708 19.6332 1.83358 18.8998 1.10018ZM15.2997 7.69548C15.3084 7.77361 15.3128 7.89059 15.3128 8.04711C15.3128 8.77632 15.2063 9.50767 14.9938 10.241C14.7812 10.9747 14.4556 11.6778 14.0171 12.3505C13.579 13.0231 13.0559 13.618 12.4484 14.1344C11.8406 14.6507 11.1116 15.0632 10.2607 15.3711C9.41021 15.6795 8.49858 15.8337 7.52642 15.8337C6.0161 15.8337 4.61852 15.4254 3.33373 14.6098C3.54206 14.6357 3.7592 14.6488 3.98477 14.6488C5.24352 14.6488 6.37635 14.2582 7.38335 13.4767C6.79315 13.4683 6.26571 13.2861 5.80134 12.9298C5.33683 12.574 5.01357 12.1226 4.83123 11.5757C5.05685 11.6104 5.2261 11.6276 5.33893 11.6276C5.52988 11.6276 5.75131 11.5929 6.00296 11.5236C5.3693 11.4019 4.83552 11.0875 4.40148 10.5797C3.96735 10.0718 3.75035 9.49244 3.75035 8.84145V8.81541C4.21029 9.03227 4.64433 9.1451 5.05238 9.1539C4.26242 8.62427 3.86747 7.86482 3.86747 6.87524C3.86747 6.38907 3.99325 5.92904 4.245 5.495C4.9307 6.33708 5.76421 7.00974 6.74499 7.51319C7.72586 8.0166 8.77632 8.29886 9.89606 8.35957C9.85274 8.19465 9.83098 7.98623 9.83098 7.73457C9.83098 6.97923 10.0979 6.3348 10.6318 5.80088C11.1656 5.26701 11.8102 4.99998 12.5653 4.99998C13.3641 4.99998 14.0283 5.28653 14.5578 5.85949C15.1568 5.74665 15.7386 5.52519 16.3027 5.19545C16.0857 5.86368 15.6818 6.37156 15.0918 6.71881C15.6559 6.64055 16.1809 6.49306 16.667 6.27606C16.3024 6.8316 15.8465 7.30468 15.2997 7.69548Z" fill="#667C99" />
+                        </svg>
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9126 10.0142C11.9126 11.0197 11.0974 11.835 10.0918 11.835C9.08625 11.835 8.271 11.0197 8.271 10.0142C8.271 9.00861 9.08625 8.19336 10.0918 8.19336C11.0974 8.19336 11.9126 9.00861 11.9126 10.0142Z" fill="#667C99" />
+                            <path d="M13.1458 4.55273H7.04075C5.71186 4.55273 4.63086 5.63373 4.63086 6.96263V13.0677C4.63086 14.3966 5.71186 15.4776 7.04075 15.4776H13.1458C14.4747 15.4776 15.5557 14.3966 15.5557 13.0677V6.96263C15.5557 5.63373 14.4747 4.55273 13.1458 4.55273ZM10.0933 13.0275C8.43224 13.0275 7.08091 11.6762 7.08091 10.0152C7.08091 8.35412 8.43224 7.00279 10.0933 7.00279C11.7543 7.00279 13.1056 8.35412 13.1056 10.0152C13.1056 11.6762 11.7543 13.0275 10.0933 13.0275ZM13.5475 7.16345C13.2147 7.16345 12.945 6.89375 12.945 6.56098C12.945 6.2282 13.2147 5.9585 13.5475 5.9585C13.8802 5.9585 14.1499 6.2282 14.1499 6.56098C14.1499 6.89375 13.8802 7.16345 13.5475 7.16345Z" fill="#667C99" />
+                            <path d="M14.7266 0H5.27344C2.36572 0 0 2.36572 0 5.27344V14.7266C0 17.6343 2.36572 20 5.27344 20H14.7266C17.6343 20 20 17.6343 20 14.7266V5.27344C20 2.36572 17.6343 0 14.7266 0ZM16.4844 12.9688C16.4844 14.9072 14.9072 16.4844 12.9688 16.4844H7.03125C5.09277 16.4844 3.51562 14.9072 3.51562 12.9688V7.03125C3.51562 5.09277 5.09277 3.51562 7.03125 3.51562H12.9688C14.9072 3.51562 16.4844 5.09277 16.4844 7.03125V12.9688Z" fill="#667C99" />
+                        </svg>
+
+                  </div>
+
+                </div>
+            </div>
+
+        </footer>
+    );
 };
-
-function FooterColumn({
-  title,
-  visible,
-  delay,
-  content,
-}: {
-  title: string;
-  visible: boolean;
-  delay: string;
-  content: React.ReactNode;
-}) {
-  return (
-    <div
-      className="transition-all duration-700"
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(22px)",
-        transitionDelay: delay,
-      }}
-    >
-      <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[2.5px] text-white/55">
-        {title}
-      </h3>
-      {content}
-    </div>
-  );
-}
-
-function LinkedInIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-      width="18"
-      height="18"
-    >
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" rx="1" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
-
-function InstagramIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-      width="18"
-      height="18"
-    >
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function WhatsAppIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-      width="20"
-      height="20"
-    >
-      {/* Chat bubble */}
-      <path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.7-4.3A9 9 0 1 1 21 11.5z" />
-
-      {/* Phone */}
-      <path d="M9 9c.2-.4.4-.5.7-.5h.5c.3 0 .5.1.6.4l.7 1.6c.1.3.1.5 0 .7l-.3.5c-.1.2-.1.3 0 .5.4.6 1 1.2 1.6 1.6.2.1.3.1.5 0l.5-.3c.2-.1.4-.1.7 0l1.6.7c.3.1.4.3.4.6v.5c0 .3-.1.5-.5.7-.5.2-1.6.3-3.2-.4a8.8 8.8 0 0 1-4.1-4.1C8.7 10.6 8.8 9.5 9 9z" />
-    </svg>
-  );
-}
-
-function PhoneIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-      width="16"
-      height="16"
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 13.5 19.8 19.8 0 0 1 1.62 4.9 2 2 0 0 1 3.59 2.73h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11l-.94.73a16 16 0 0 0 6 6l.91-.92a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.73 2.02Z" />
-    </svg>
-  );
-}
-
-function MailIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-      width="16"
-      height="16"
-    >
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m4 7 8 6 8-6" />
-    </svg>
-  );
-}
-
-function MapPinIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-      width="16"
-      height="16"
-    >
-      <path d="M12 21s-7-4.35-7-11a7 7 0 1 1 14 0c0 6.65-7 11-7 11Z" />
-      <circle cx="12" cy="10" r="2.5" />
-    </svg>
-  );
-}
 
 export default Footer;
