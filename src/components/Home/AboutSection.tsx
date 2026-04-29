@@ -1,9 +1,7 @@
-
-
 function AboutSection() {
     return (
         <>
-            <div className="bg-[url('/img/img1.png')] bg-cover bg-center h-[70vh] mt-32 ">
+            <div  className="bg-[url('/img/img1.png')] bg-cover bg-center h-[70vh] mt-32 ">
             </div>
             <section className="w-full bg-gray-300 py-6 sm:py-8 md:py-10 px-4 sm:px-6 md:px-10">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -24,7 +22,6 @@ function AboutSection() {
                             READ MORE
                         </button>
                     </div>
-
                 </div>
             </section>
 
@@ -33,4 +30,4 @@ function AboutSection() {
     )
 }
 
-export default AboutSection
+export default AboutSection;

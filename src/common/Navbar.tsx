@@ -34,11 +34,9 @@ function Navbar() {
             {/* Desktop Nav Links */}
             <div className='hidden md:flex items-center gap-6 lg:gap-10 font-medium archivo text-[16px] text-[#001025]'>
               <Link to="/" className='hover:text-[#9F6907] transition-colors'>Home</Link>
-              <Link to="/about" className='hover:text-[#9F6907] transition-colors'>About</Link>
-              <Link to="/career" className='hover:text-[#9F6907] transition-colors'>Service</Link>
-              <Link to="/career" className='hover:text-[#9F6907] transition-colors'>Legal Guide</Link>
-              <Link to="/career" className='hover:text-[#9F6907] transition-colors'>Why Choose Us</Link>
-              <Link to="/contact" className='hover:text-[#9F6907] transition-colors'>Contact</Link>
+              <Link to="/" className='hover:text-[#9F6907] transition-colors'>About</Link>
+              <Link to="/" className='hover:text-[#9F6907] transition-colors'>Services</Link>
+              <Link to="/" className='hover:text-[#9F6907] transition-colors'>Contact</Link>
             </div>
 
             {/* Desktop CTA */}
@@ -79,13 +77,13 @@ function Navbar() {
           <Link to="/" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
             Home
           </Link>
-          <Link to="/about" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
+          <Link to="/" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
             About
           </Link>
-          <Link to="/career" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
+          <Link to="/" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
             Career
           </Link>
-          <Link to="/contact" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
+          <Link to="/" onClick={() => setOpen(false)} className='block py-1 text-[15px] text-[#001025] hover:text-[#9F6907] transition-colors'>
             Contact
           </Link>
           <Link

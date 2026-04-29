@@ -1,6 +1,6 @@
 const ExpertiseIntro = () => {
     return (
-        <section className="w-full bg-[#041c34] py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-10">
+        <section  className="w-full bg-[#041c34] py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-10">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
 
                 {/* Left — Two Images */}
@@ -29,7 +29,7 @@ const ExpertiseIntro = () => {
                         <span className="text-4xl sm:text-5xl text-[#c8a96a] leading-none marcellus flex-shrink-0 mt-0.5">
                             O
                         </span>
-                     
+
                         <ul className="space-y-3 text-sm sm:text-base text-gray-400 archivo">
                             <p className="mt-2">ur comprehensive legal guide is designed to help you:</p>
                             <li className="flex items-start gap-2">
@@ -50,13 +50,13 @@ const ExpertiseIntro = () => {
                             </li>
                         </ul>
                     </div>
+                   
 
                     {/* Second Paragraph */}
-                    {/* <p className="mt-6 text-sm sm:text-base leading-relaxed text-gray-400 archivo">
-                        Helping individuals navigate personal family matters with privacy,
-                        professionalism, and clarity. Our team focuses on peaceful resolution
-                        and structured support.
-                    </p> */}
+                    {/* <p className="mt-6 text-sm sm:text-base leading-relaxed text-gray-400 archivo"></p> */}
+
+
+
                 </div>
 
             </div>

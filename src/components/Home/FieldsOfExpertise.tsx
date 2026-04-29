@@ -24,6 +24,7 @@ const ExpertiseItem: React.FC<Item> = ({ title, subtitle }) => {
     <div className="py-7 border-b border-[#BF9874] flex items-center justify-between gap-4">
       <div>
         <h3 className="text-white text-sm sm:text-base font-medium">
+          
           {title}
         </h3>
         <p className="text-gray-400 text-xs mt-1">{subtitle}</p>
