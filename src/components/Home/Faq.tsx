@@ -64,12 +64,12 @@ export default function Faq() {
                                 <span className="ml-2 text-[#c8a27a]">
                                     {openIndex === index ?
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M24 20L16 12L8 20" stroke="#BF9874" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M24 20L16 12L8 20" stroke="#BF9874" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
 
                                         :
                                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 0.999998L9 9L17 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M1 0.999998L9 9L17 1" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
 
                                     }

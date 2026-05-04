@@ -50,9 +50,7 @@ const AttorneyHero: React.FC = () => {
 
         </div> */}
 
-        <div className="flex items-center justify-center 
-    gap-3 sm:gap-5 md:gap-6 
-    flex-wrap">
+        <div className="flex items-center justify-center  gap-3 sm:gap-5 md:gap-6 flex-wrap">
 
           {/* Left Line */}
           <svg
@@ -114,8 +112,8 @@ const AttorneyHero: React.FC = () => {
                 <span className="flex mt-3 text-[12px] tracking-[2px] text-[#9F6907] archivo">
                   LEARN MORE
                   <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.41683 15.583L15.5835 6.41634" stroke="#BF9874" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M6.41683 6.41634L15.5835 6.41634L15.5835 15.583" stroke="#BF9874" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.41683 15.583L15.5835 6.41634" stroke="#BF9874" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6.41683 6.41634L15.5835 6.41634L15.5835 15.583" stroke="#BF9874" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
 
                 </span>

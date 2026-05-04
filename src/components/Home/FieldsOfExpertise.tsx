@@ -32,8 +32,8 @@ const ExpertiseItem: React.FC<Item> = ({ title, subtitle }) => {
 
       <button className="text-[10px] sm:text-xs tracking-widest text-white uppercase flex items-center gap-1 hover:opacity-80 transition">
         Learn More <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.41683 15.583L15.5835 6.41634" stroke="#BF9874" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M6.41683 6.41634L15.5835 6.41634L15.5835 15.583" stroke="#BF9874" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6.41683 15.583L15.5835 6.41634" stroke="#BF9874" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M6.41683 6.41634L15.5835 6.41634L15.5835 15.583" stroke="#BF9874" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
 
       </button>

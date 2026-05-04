@@ -24,9 +24,7 @@ function AboutSection() {
                     </div>
                 </div>
             </section>
-
         </>
-
     )
 }
 

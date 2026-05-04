@@ -17,16 +17,14 @@ function Hero() {
 
                 <h1 className="
                     text-3xl sm:text-5xl md:text-6xl lg:text-[80px]
-                    leading-tight marcellus mb-4
-                ">
+                    leading-tight marcellus mb-4">
                     Empowering You to Navigate Family Law
                 </h1>
 
                 <p className="
                     text-sm sm:text-base md:text-lg 
                     text-[#FFFFFF] archivo
-                    max-w-md md:max-w-xl
-                ">
+                    max-w-md md:max-w-xl">
                    At Family McKenzie, we understand that family law can feel complex and overwhelming.
                 </p>
 
