@@ -67,14 +67,14 @@ const Footer: React.FC = () => {
                     flex flex-col md:flex-row items-center 
                     justify-between gap-3">
 
-                    <span>Privacy</span>
+                 
 
                     <span className="text-center">
-                        Copyright DoctractiveMarket, All Rights Reserved
+                      Copyright @2026 Family Mckenzie, All Rights Reserved
                     </span>
 
                     {/* Social Icons */}
-                    <div className="flex gap-3">
+                    {/* <div className="flex gap-3">
                       
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.0703 0H2.92969C1.31439 0 0 1.31439 0 2.92969V17.0703C0 18.6856 1.31439 20 2.92969 20H8.82812V12.9297H6.48438V9.41406H8.82812V7.03125C8.82812 5.09262 10.4051 3.51562 12.3438 3.51562H15.8984V7.03125H12.3438V9.41406H15.8984L15.3125 12.9297H12.3438V20H17.0703C18.6856 20 20 18.6856 20 17.0703V2.92969C20 1.31439 18.6856 0 17.0703 0Z" fill="#667C99" />
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                             <path d="M14.7266 0H5.27344C2.36572 0 0 2.36572 0 5.27344V14.7266C0 17.6343 2.36572 20 5.27344 20H14.7266C17.6343 20 20 17.6343 20 14.7266V5.27344C20 2.36572 17.6343 0 14.7266 0ZM16.4844 12.9688C16.4844 14.9072 14.9072 16.4844 12.9688 16.4844H7.03125C5.09277 16.4844 3.51562 14.9072 3.51562 12.9688V7.03125C3.51562 5.09277 5.09277 3.51562 7.03125 3.51562H12.9688C14.9072 3.51562 16.4844 5.09277 16.4844 7.03125V12.9688Z" fill="#667C99" />
                         </svg>
 
-                  </div>
+                  </div> */}
 
                 </div>
             </div>

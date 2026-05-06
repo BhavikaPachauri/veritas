@@ -8,12 +8,10 @@ function AboutSection() {
 
                     {/* Left Content */}
                     <div>
-                        <h2 className="text-base sm:text-lg md:text-[26px] font-medium text-[#001025] archivo ">
-                            An interview with our senior family counsel
+                        <h2 className="text-base sm:text-lg md:text-[22px] font-medium text-[#001025] archivo ">
+                            Understanding Your Rights: A Talk with Our Family Counsel
                         </h2>
-                        <p className="text-xs archivo  sm:text-base text-gray-600 mt-1 tracking-wide uppercase">
-                            Read More
-                        </p>
+                       
                     </div>
 
                     {/* Button */}

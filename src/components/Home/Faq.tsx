@@ -7,21 +7,25 @@ type Item = {
 
 const data: Item[] = [
     {
-        title: "How can we help you?",
+        title: "How can Family McKenzie help me with my divorce?",
         content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We guide you through the divorce process with strategic legal expertise. Our attorneys protect your rights in asset division, custody, and settlements, always striving for an amicable and efficient resolution.",
     },
     {
-        title: "Legal and law advices.",
-        content: "We provide expert legal consultation tailored to your needs.",
+        title: "How long does the divorce process typically take?",
+        content: "Timelines vary based on case complexity. Uncontested cases can finalize in a few months, while contested divorces may take over a year. We work diligently to resolve your case without unnecessary delays.",
     },
     {
-        title: "Get compensation for your injuries.",
-        content: "Our team helps you claim rightful compensation efficiently.",
+        title: " How are child custody and support determined?",
+        content: `Courts prioritize the “best interests of the child,” focusing on stability and emotional ties. Child support is calculated using state guidelines, factoring in both parents’ incomes and the final parenting schedule.`,
     },
     {
-        title: "Our mission is Your success.",
-        content: "We focus on delivering results that matter for you.",
+        title: "How will our assets and property be divided?",
+        content: "We pursue a fair and equitable split of all marital assets. When necessary, we engage financial experts to accurately value and divide real estate, businesses, retirement accounts, and shared debts.",
+    },
+    {
+        title: "What should I bring to my initial consultation?",
+        content: "Please bring any existing legal documents, a basic overview of your shared finances, and a list of your primary goals. This allows us to assess your situation and outline the best legal strategy immediately.",
     },
 ];
 

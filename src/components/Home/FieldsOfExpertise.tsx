@@ -6,17 +6,17 @@ type Item = {
 };
 
 const leftItems: Item[] = [
-  { title: "Separation Guidance", subtitle: "2 Lawyers" },
-  { title: "Employment Law", subtitle: "4 Experts" },
-  { title: "Public Procurement Law", subtitle: "3 Lawyers" },
-  { title: "Medical Law", subtitle: "5 Experts" },
+  { title: "Divorce & Separation", subtitle: "2 Lawyers" },
+  { title: "Financial Settlements", subtitle: "4 Experts" },
+  { title: "Domestic Abuse & Protection Orders", subtitle: "3 Lawyers" },
+
 ];
 
 const rightItems: Item[] = [
-  { title: "Criminal Law", subtitle: "7 Lawyers" },
-  { title: "Building and Architect Law", subtitle: "4 Experts" },
-  { title: "Intellectual Property", subtitle: "2 Experts" },
-  { title: "Family & Inheritance Law", subtitle: "4 Experts" },
+  { title: "Children Matters Law", subtitle: "7 Lawyers" },
+  { title: "Cohabitation & Prenuptial Agreements", subtitle: "4 Experts" },
+  { title: "Legal Process & Court Guidance", subtitle: "2 Experts" },
+ 
 ];
 
 const ExpertiseItem: React.FC<Item> = ({ title, subtitle }) => {
@@ -31,7 +31,7 @@ const ExpertiseItem: React.FC<Item> = ({ title, subtitle }) => {
       </div>
 
       <button className="text-[10px] sm:text-xs tracking-widest text-white uppercase flex items-center gap-1 hover:opacity-80 transition">
-        Learn More <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.41683 15.583L15.5835 6.41634" stroke="#BF9874" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M6.41683 6.41634L15.5835 6.41634L15.5835 15.583" stroke="#BF9874" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -60,7 +60,7 @@ const FieldsOfExpertise: React.FC = () => {
           <div className="flex justify-center items-center gap-6">
             
             <h2 className="text-3xl marcellus sm:text-4xl md:text-5xl font-serif text-white tracking-wide">
-              FIELDS OF EXPERTISE
+              SERVICES
             </h2>
           
           </div>

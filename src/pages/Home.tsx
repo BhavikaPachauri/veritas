@@ -26,9 +26,9 @@ function Home() {
     <FieldsOfExpertise/>
     <Slider/>
     <WorkingBanner/>
-    <Faq/>
     <VeritasHighlight/>
     <AttorneyHero/>
+    <Faq/>
     <ContactLocations/>
     <Testimonials/>
     <InquirySection/>

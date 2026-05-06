@@ -24,7 +24,7 @@ function Hero() {
                 <p className="
                     text-sm sm:text-base md:text-lg 
                     text-[#FFFFFF] archivo
-                    max-w-md md:max-w-xl">
+                    max-w-md md:max-w-md">
                    At Family McKenzie, we understand that family law can feel complex and overwhelming.
                 </p>
 

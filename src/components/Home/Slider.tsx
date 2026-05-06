@@ -9,7 +9,7 @@ const stats: StatItem[] = [
   { value: "54", label: "Employees" },
   { value: "34", label: "Programs" },
   { value: "320", label: "Cases" },
-  { value: "100+", label: "Donations" },
+  { value: "100+", label: "Donations" }
 ];
 
 const ArrowDivider = () => (

@@ -29,9 +29,9 @@ const ExpertiseIntro = () => {
                         <span className="text-4xl sm:text-5xl text-[#c8a96a] leading-none marcellus flex-shrink-0 mt-0.5">
                             O
                         </span>
-
-                        <ul className="space-y-3 text-sm sm:text-base text-gray-400 archivo">
-                            <p className="mt-2">ur comprehensive legal guide is designed to help you:</p>
+                        <p className="mt-2 max-w-md text-justify archivo">ur comprehensive legal guide is designed to help you: Understand your rights and legal options while exploring practical solutions tailored to your situation. Make informed decisions with confidence as you navigate family law with clarity, care, and the support you need.</p>
+                        {/* <ul className="space-y-3 text-sm sm:text-base text-white archivo">
+                            <p className="mt-2">ur comprehensive legal guide is designed to help you: Understand your rights and legal options while exploring practical solutions tailored to your situation. Make informed decisions with confidence as you navigate family law with clarity, care, and the support you need.</p>
                             <li className="flex items-start gap-2">
                                 <span className="text-[#c8a96a] mt-1">•</span>
                                 <span>Understand your rights and legal options</span>
@@ -49,7 +49,9 @@ const ExpertiseIntro = () => {
                                 <span>Navigate family law with clarity and care</span>
                             </li>
                         </ul>
+                        */}
                     </div>
+                   
                 </div>
             </div>
         </section>

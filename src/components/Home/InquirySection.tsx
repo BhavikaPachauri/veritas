@@ -46,7 +46,7 @@ const InquirySection: React.FC = () => {
                     {/* Text */}
                     <h2 className="text-sm sm:text-xl md:text-3xl lg:text-5xl 
         marcellus text-[#0f1b2d] text-center whitespace-nowrap">
-                        MAKE AN INQUIRY
+                        BOOK AN APPOINTMENT
                     </h2>
 
                     {/* Right Line */}

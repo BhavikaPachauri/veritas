@@ -2,30 +2,37 @@ import React from "react";
 
 type Card = {
   title: string;
-  date: string;
-  role: string;
+  subtitle: string;
   image: string;
 };
 
 const cards: Card[] = [
   {
-    title: "Fresh Legal Tech’s Predictions for Privacy in 2025",
-    date: "January 30",
-    role: "Consultant",
+    title: "What They Cover",
+    subtitle:"These legal documents set out how property, finances, and responsibilities are shared while ",
     image: "/img/img12.png",
   },
-  {
-    title: "The Language of the Civil Law by Urban A. Lavery",
-    date: "January 30",
-    role: "Consultant",
-    image: "/img/img11.png",
+   {
+    title: "Why You Need One",
+    subtitle:"While not legally mandatory, a clear agreement reduces misunderstandings and prevents",
+    image: "/img/img12.png",
   },
-  {
-    title: "Legal Tech’s Predictions & Trends for Privacy in 2028",
-    date: "January 30",
-    role: "Consultant",
-    image: "/img/img13.png",
+   {
+    title: "Our Service",
+    subtitle:"At Family McKenzie, we guide you through the process: explaining your rights, drafting a ",
+    image: "/img/img12.png",
   },
+   {
+    title: "The Benefits",
+    subtitle:"A Living Together Agreement provides clarity, security, and peace of mind—allowing you to ",
+    image: "/img/img12.png",
+  },
+   {
+    title: "Our Approach",
+    subtitle:"We combine legal expertise with practical, empathetic advice to help you protect your  ",
+    image: "/img/img12.png",
+  },
+ 
 ];
 
 const AttorneyHero: React.FC = () => {
@@ -64,7 +71,7 @@ const AttorneyHero: React.FC = () => {
           {/* Text */}
           <h2 className="text-lg sm:text-3xl md:text-4xl lg:text-5xl 
               marcellus text-white text-center whitespace-nowrap">
-            MAKE AN INQUIRY
+            LIVING TOGETHER AGREEMENT
           </h2>
 
           {/* Right Line */}
@@ -79,8 +86,8 @@ const AttorneyHero: React.FC = () => {
         </div>
 
 
-        <p className="text-center text-[10px] tracking-[3px] text-[#BF9874] mt-3 archivo">
-          VISION MAKES US WHO WE ARE
+        <p className="text-center text-[10px] tracking-[3px] font-bold text-[#BF9874] mt-3 archivo">
+          Build a Secure Future Together
         </p>
 
         {/* Cards */}
@@ -101,12 +108,12 @@ const AttorneyHero: React.FC = () => {
 
               {/* Content */}
               <div className="mt-4">
-                <p className="text-[12px] text-[#667C99] archivo">
-                  {card.date} | {card.role}
+                <p className="text-[17px] text-[#667C99] archivo">
+                  {card.title}
                 </p>
 
                 <h3 className="mt-2 text-[17px] leading-6 font-medium archivo ">
-                  {card.title}
+                  {card.subtitle}
                 </h3>
 
                 <span className="flex mt-3 text-[12px] tracking-[2px] text-[#9F6907] archivo">
@@ -120,6 +127,7 @@ const AttorneyHero: React.FC = () => {
               </div>
             </div>
           ))}
+          
         </div>
 
       </div>
