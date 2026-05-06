@@ -6,10 +6,10 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { value: "54", label: "Employees" },
-  { value: "34", label: "Programs" },
-  { value: "320", label: "Cases" },
-  { value: "100+", label: "Donations" }
+  { value: "01", label: "Dedicated Legal Team" },
+  { value: "02", label: "Client-Focused Approach" },
+  { value: "03", label: "Practice Areas" },
+  { value: "04", label: "Privacy" }
 ];
 
 const ArrowDivider = () => (
@@ -40,7 +40,7 @@ const Slider: React.FC = () => {
 
               <ArrowDivider />
 
-              <span className="archivo text-white text-sm lg:text-2xl whitespace-nowrap">
+              <span className="archivo text-white text-sm lg:text-lg whitespace-nowrap">
                 {item.label}
               </span>
             </div>
@@ -51,13 +51,13 @@ const Slider: React.FC = () => {
         <div className="grid grid-cols-4 gap-6 md:hidden">
           {stats.map((item, index) => (
             <div key={index} className="flex flex-col items-center justify-center">
-              <span className="text-[#BF9874] text-xl font-semibold marcellus ">
+              <span className="text-[#BF9874] text-lg font-semibold marcellus ">
                 {item.value}
               </span>
               <div className="">
                 <ArrowDivider />
               </div>
-              <span className="text-white text-xs text-center archivo">
+              <span className="text-white text-[5px] text-center archivo">
                 {item.label}
               </span>
             </div>

@@ -7,16 +7,20 @@ type Location = {
 
 const locations: Location[] = [
     {
-        country: "United States",
-        email: "info.us@veritas.com",
+        country: "Expertise",
+        email: "Legal Excellence",
     },
     {
-        country: "United Kingdom",
-        email: "info.uk@veritas.com",
+        country: "Compassion",
+        email: "Client First",
     },
     {
-        country: "United Arab Emirates",
-        email: "info.uae@veritas.com",
+        country: "Integrity",
+        email: "Always Honest",
+    },
+      {
+        country: "Discretion",
+        email: "Fully Protected",
     },
 ];
 
@@ -32,10 +36,10 @@ const ContactLocations: React.FC = () => {
                     >
                         {/* Content */}
                         <div className="text-center archivo">
-                            <h3 className="text-[15px] font-medium text-[#1a2a3a]">
+                            <h3 className="text-[15px] font-medium text-[#001025]">
                                 {loc.country}
                             </h3>
-                            <p className="text-[13px] text-[#5c6b7a] mt-1">
+                            <p className="text-[13px] text-[#667C99] mt-1">
                                 {loc.email}
                             </p>
                         </div>

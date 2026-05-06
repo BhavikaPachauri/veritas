@@ -3,98 +3,95 @@ import React from "react";
 const Footer: React.FC = () => {
     return (
         <footer className="bg-[#071a2f] text-white archivo">
-
             {/* Top Section */}
             <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 
-                grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
 
                 {/* Column 1 */}
                 <div>
-                    <h3 className="text-sm font-medium mb-3">World Offices</h3>
-                    <p className="text-xs text-gray-400">
-                        Essex, United Kingdom
-                    </p>
+                    <h3 className="text-sm font-semibold mb-4">Expertise</h3>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" className="hover:text-white transition">Divorce & Separation</a></li>
+                        <li><a href="#" className="hover:text-white transition">Financial Settlement</a></li>
+                        <li><a href="#" className="hover:text-white transition">Non-Molestation Order</a></li>
+                        <li><a href="#" className="hover:text-white transition">Prenuptial Agreements</a></li>
+                        <li><a href="#" className="hover:text-white transition">Domestic Abuse Support</a></li>
+                        <li><a href="#" className="hover:text-white transition">Mediation Services</a></li>
+                    </ul>
                 </div>
 
-                {/* Right Side */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                {/* Column 2 */}
+                <div>
+                    <h3 className="text-sm font-semibold mb-4">World Offices</h3>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        <li>London, United Kingdom</li>
+                        <li>Edinburgh, Scotland</li>
+                        <li>Dublin, Republic of Ireland</li>
+                    </ul>
+                </div>
 
-                    {/* Column 2 */}
-                    <div>
-                        <h3 className="text-sm font-medium mb-3">Expertise</h3>
-                        <ul className="space-y-2 text-xs text-gray-400">
-                            <li>Divorce</li>
-                            <li>Financial settlement</li>
-                            <li>Children custody</li>
-                            <li>Non-Molestation order</li>
-                        </ul>
-                    </div>
+                {/* Column 3 */}
+                <div>
+                    <h3 className="text-sm font-semibold mb-4">FAQ</h3>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        {[
+                            "How do I start a divorce?",
+                            "What is a clean break order?",
+                            "How is custody determined?",
+                            "Do I need a solicitor?",
+                            "How long does divorce take?",
+                            "Are you licensed in my country?"
+                        ].map((item, index) => (
+                            <li key={index}>
+                                <button
+                                    className="text-left w-full hover:text-white transition"
+                                    aria-label={item}
+                                >
+                                    {item}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-                    {/* Column 3 */}
-                    <div>
-                        <h3 className="text-sm font-medium mb-3">FAQ</h3>
-                        <ul className="space-y-2 text-xs text-gray-400">
-                            <li>How Do I Choose a Lawyer?</li>
-                            <li>What is Domestic Violence</li>
-                            <li>How is child custody determined?</li>
-                            <li>Do I need a personal Lawyer?</li>
-                            <li>Are you licensed in my country?</li>
-                        </ul>
-                    </div>
-
+                {/* Column 4 */}
+                <div>
+                    <h3 className="text-sm font-semibold mb-4">Quick Links</h3>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" className="hover:text-white transition">About Our Firm</a></li>
+                        <li><a href="#" className="hover:text-white transition">Meet the Team</a></li>
+                        <li><a href="#" className="hover:text-white transition">Client Testimonials</a></li>
+                        <li><a href="#" className="hover:text-white transition">Case Results</a></li>
+                    </ul>
                 </div>
             </div>
 
-            {/* Middle CTA */}
+            {/* CTA Section */}
             <div className="max-w-6xl mx-auto px-6 pb-10 
-                flex flex-col md:flex-row gap-4 md:gap-0 
+                flex flex-col md:flex-row gap-6 
                 justify-between items-start md:items-center">
 
-                <h2 className="text-md md:text-xl marcellus leading-snug max-w-md">
+                <h2 className="text-lg md:text-xl marcellus leading-snug max-w-md">
                     HIRE ONE OF OUR PROFESSIONAL <br />
                     LEGAL EXPERT NOW
                 </h2>
 
                 <p className="text-sm">
                     Emergency Call{" "}
-                    <span className="text-[#BF9874]">907 683 8196</span>
+                    <a href="tel:+442083990000" className="text-[#BF9874] hover:underline">
+                        +44 208 399 0000
+                    </a>
                 </p>
             </div>
 
             {/* Bottom Bar */}
             <div className="bg-[#cfd5dd] text-[#1a2a3a] text-xs py-3">
-                <div className="max-w-6xl mx-auto px-6 
-                    flex flex-col md:flex-row items-center 
-                    justify-between gap-3">
-
-                 
-
+                <div className="max-w-6xl mx-auto px-6 flex justify-center">
                     <span className="text-center">
-                      Copyright @2026 Family Mckenzie, All Rights Reserved
+                        Copyright @2026 Family Mckenzie, All Rights Reserved
                     </span>
-
-                    {/* Social Icons */}
-                    {/* <div className="flex gap-3">
-                      
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.0703 0H2.92969C1.31439 0 0 1.31439 0 2.92969V17.0703C0 18.6856 1.31439 20 2.92969 20H8.82812V12.9297H6.48438V9.41406H8.82812V7.03125C8.82812 5.09262 10.4051 3.51562 12.3438 3.51562H15.8984V7.03125H12.3438V9.41406H15.8984L15.3125 12.9297H12.3438V20H17.0703C18.6856 20 20 18.6856 20 17.0703V2.92969C20 1.31439 18.6856 0 17.0703 0Z" fill="#667C99" />
-                        </svg>
-
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.8998 1.10018C18.1666 0.366771 17.2832 0 16.2503 0H3.75003C2.71712 0 1.83372 0.366771 1.10018 1.10018C0.366771 1.83372 0 2.71708 0 3.75003V16.2502C0 17.283 0.366771 18.1665 1.10018 18.9C1.83372 19.6336 2.71712 20.0003 3.75003 20.0003H16.2502C17.2831 20.0003 18.1665 19.6336 18.8997 18.9C19.6332 18.1665 20 17.2831 20 16.2502V3.75003C20 2.71708 19.6332 1.83358 18.8998 1.10018ZM15.2997 7.69548C15.3084 7.77361 15.3128 7.89059 15.3128 8.04711C15.3128 8.77632 15.2063 9.50767 14.9938 10.241C14.7812 10.9747 14.4556 11.6778 14.0171 12.3505C13.579 13.0231 13.0559 13.618 12.4484 14.1344C11.8406 14.6507 11.1116 15.0632 10.2607 15.3711C9.41021 15.6795 8.49858 15.8337 7.52642 15.8337C6.0161 15.8337 4.61852 15.4254 3.33373 14.6098C3.54206 14.6357 3.7592 14.6488 3.98477 14.6488C5.24352 14.6488 6.37635 14.2582 7.38335 13.4767C6.79315 13.4683 6.26571 13.2861 5.80134 12.9298C5.33683 12.574 5.01357 12.1226 4.83123 11.5757C5.05685 11.6104 5.2261 11.6276 5.33893 11.6276C5.52988 11.6276 5.75131 11.5929 6.00296 11.5236C5.3693 11.4019 4.83552 11.0875 4.40148 10.5797C3.96735 10.0718 3.75035 9.49244 3.75035 8.84145V8.81541C4.21029 9.03227 4.64433 9.1451 5.05238 9.1539C4.26242 8.62427 3.86747 7.86482 3.86747 6.87524C3.86747 6.38907 3.99325 5.92904 4.245 5.495C4.9307 6.33708 5.76421 7.00974 6.74499 7.51319C7.72586 8.0166 8.77632 8.29886 9.89606 8.35957C9.85274 8.19465 9.83098 7.98623 9.83098 7.73457C9.83098 6.97923 10.0979 6.3348 10.6318 5.80088C11.1656 5.26701 11.8102 4.99998 12.5653 4.99998C13.3641 4.99998 14.0283 5.28653 14.5578 5.85949C15.1568 5.74665 15.7386 5.52519 16.3027 5.19545C16.0857 5.86368 15.6818 6.37156 15.0918 6.71881C15.6559 6.64055 16.1809 6.49306 16.667 6.27606C16.3024 6.8316 15.8465 7.30468 15.2997 7.69548Z" fill="#667C99" />
-                        </svg>
-
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.9126 10.0142C11.9126 11.0197 11.0974 11.835 10.0918 11.835C9.08625 11.835 8.271 11.0197 8.271 10.0142C8.271 9.00861 9.08625 8.19336 10.0918 8.19336C11.0974 8.19336 11.9126 9.00861 11.9126 10.0142Z" fill="#667C99" />
-                            <path d="M13.1458 4.55273H7.04075C5.71186 4.55273 4.63086 5.63373 4.63086 6.96263V13.0677C4.63086 14.3966 5.71186 15.4776 7.04075 15.4776H13.1458C14.4747 15.4776 15.5557 14.3966 15.5557 13.0677V6.96263C15.5557 5.63373 14.4747 4.55273 13.1458 4.55273ZM10.0933 13.0275C8.43224 13.0275 7.08091 11.6762 7.08091 10.0152C7.08091 8.35412 8.43224 7.00279 10.0933 7.00279C11.7543 7.00279 13.1056 8.35412 13.1056 10.0152C13.1056 11.6762 11.7543 13.0275 10.0933 13.0275ZM13.5475 7.16345C13.2147 7.16345 12.945 6.89375 12.945 6.56098C12.945 6.2282 13.2147 5.9585 13.5475 5.9585C13.8802 5.9585 14.1499 6.2282 14.1499 6.56098C14.1499 6.89375 13.8802 7.16345 13.5475 7.16345Z" fill="#667C99" />
-                            <path d="M14.7266 0H5.27344C2.36572 0 0 2.36572 0 5.27344V14.7266C0 17.6343 2.36572 20 5.27344 20H14.7266C17.6343 20 20 17.6343 20 14.7266V5.27344C20 2.36572 17.6343 0 14.7266 0ZM16.4844 12.9688C16.4844 14.9072 14.9072 16.4844 12.9688 16.4844H7.03125C5.09277 16.4844 3.51562 14.9072 3.51562 12.9688V7.03125C3.51562 5.09277 5.09277 3.51562 7.03125 3.51562H12.9688C14.9072 3.51562 16.4844 5.09277 16.4844 7.03125V12.9688Z" fill="#667C99" />
-                        </svg>
-
-                  </div> */}
-
                 </div>
             </div>
-
         </footer>
     );
 };

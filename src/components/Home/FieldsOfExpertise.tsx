@@ -7,15 +7,15 @@ type Item = {
 
 const leftItems: Item[] = [
   { title: "Divorce & Separation", subtitle: "2 Lawyers" },
-  { title: "Financial Settlements", subtitle: "4 Experts" },
-  { title: "Domestic Abuse & Protection Orders", subtitle: "3 Lawyers" },
+  { title: "Financial Settlements", subtitle: "2 Lawyers" },
+  { title: "Domestic Abuse & Protection Orders", subtitle: "2 Lawyers" },
 
 ];
 
 const rightItems: Item[] = [
   { title: "Children Matters Law", subtitle: "7 Lawyers" },
-  { title: "Cohabitation & Prenuptial Agreements", subtitle: "4 Experts" },
-  { title: "Legal Process & Court Guidance", subtitle: "2 Experts" },
+  { title: "Cohabitation & Prenuptial Agreements", subtitle: "2 Lawyers" },
+  { title: "Legal Process & Court Guidance", subtitle: "2 Lawyers" },
  
 ];
 
