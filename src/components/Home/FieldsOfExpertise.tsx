@@ -3,31 +3,67 @@ import React from "react";
 type Item = {
   title: string;
   subtitle: string;
+  description: string;
 };
 
+// const leftItems: Item[] = [
+//   { title: "Divorce & Separation", subtitle: "2 Lawyers" },
+//   { title: "Financial Settlements", subtitle: "2 Lawyers" },
+//   { title: "Domestic Abuse & Protection Orders", subtitle: "2 Lawyers" },
+
+// ];
+
+// const rightItems: Item[] = [
+//   { title: "Children Matters Law", subtitle: "7 Lawyers" },
+//   { title: "Cohabitation & Prenuptial Agreements", subtitle: "2 Lawyers" },
+//   { title: "Legal Process & Court Guidance", subtitle: "2 Lawyers" },
+
+// ];
 const leftItems: Item[] = [
-  { title: "Divorce & Separation", subtitle: "2 Lawyers" },
-  { title: "Financial Settlements", subtitle: "2 Lawyers" },
-  { title: "Domestic Abuse & Protection Orders", subtitle: "2 Lawyers" },
+  { title: "Divorce & Separation", subtitle: "2 Lawyers", description: "Learn about the no-fault divorce process in the UK, timelines, and legal steps. Understand how property, assets, and pensions are divided, and discover strategies for achieving a fair settlement." },
+  { title: "Financial Settlements", subtitle: "2 Lawyers", description: "" },
+  { title: "Domestic Abuse & Protection Orders", subtitle: "2 Lawyers", description: "" },
 
 ];
 
 const rightItems: Item[] = [
-  { title: "Children Matters Law", subtitle: "7 Lawyers" },
-  { title: "Cohabitation & Prenuptial Agreements", subtitle: "2 Lawyers" },
-  { title: "Legal Process & Court Guidance", subtitle: "2 Lawyers" },
- 
+  { title: "Children Matters Law", subtitle: "7 Lawyers", description: "" },
+  { title: "Cohabitation & Prenuptial Agreements", subtitle: "2 Lawyers", description: "" },
+  { title: "Legal Process & Court Guidance", subtitle: "2 Lawyers", description: "" },
+
 ];
 
-const ExpertiseItem: React.FC<Item> = ({ title, subtitle }) => {
+const ExpertiseItem: React.FC<Item> = ({ title, subtitle, description }) => {
   return (
     <div className="py-7 border-b border-[#BF9874] flex items-center justify-between gap-4">
-      <div>
+      {/* <div className="group">
         <h3 className="text-white text-sm sm:text-base font-medium">
-          
+
           {title}
         </h3>
         <p className="text-gray-400 text-xs mt-1">{subtitle}</p>
+        <p className=" text-gray-400 text-xs mt-1 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+          {description}
+        </p>
+      </div> */}
+
+      <div className="group">
+        <h3 className="text-white text-sm sm:text-base font-medium">
+          {title}
+        </h3>
+
+        <div className="
+    opacity-0 translate-y-2
+    group-hover:opacity-100 group-hover:translate-y-0
+    transition-all duration-300 ease-in-out
+  ">
+          <p className="text-gray-400 text-xs mt-1">
+            {subtitle}
+          </p>
+          {/* <p className="text-gray-400 text-xs mt-1">
+            {description}
+          </p> */}
+        </div>
       </div>
 
       <button className="text-[10px] sm:text-xs tracking-widest text-white uppercase flex items-center gap-1 hover:opacity-80 transition">
@@ -45,24 +81,24 @@ const FieldsOfExpertise: React.FC = () => {
   return (
     <section className="relative w-full bg-[#041c34] archivo py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10">
       {/* <div className="absolute inset-0 bg-[url('/img/img8.png')] bg-cover bg-right"></div> */}
-       <div className="hidden md:block absolute right-0 bottom-0 ">
-                <img
-                    src="/img/img7.png"
-                    alt="background"
-                    className="object-contain w-[400px] md:w-[700px]"
-                />
-            </div>
+      <div className="hidden md:block absolute right-0 bottom-0 ">
+        <img
+          src="/img/img7.png"
+          alt="background"
+          className="object-contain w-[400px] md:w-[700px]"
+        />
+      </div>
 
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-12 md:mb-16">
           <div className="flex justify-center items-center gap-6">
-            
+
             <h2 className="text-3xl marcellus sm:text-4xl md:text-5xl font-serif text-white tracking-wide">
               SERVICES
             </h2>
-          
+
           </div>
 
           <p className="mt-4 text-[10px] archivo sm:text-sm tracking-[0.3em] text-[#c8a96a] uppercase">
