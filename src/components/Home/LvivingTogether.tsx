@@ -18,7 +18,7 @@ const cards: Card[] = [
       "These legal documents set out how property, finances, and responsibilities are shared while",
     description:
       "you live together, and what happens if the relationship ends. They address home ownership, bill contributions, savings or assets, and debt handling. ",
-    image: "/img/img12.png",
+    image: "/img/Living_together_agreement4.png",
   },
   {
     title: "Why You Need One",
@@ -26,7 +26,7 @@ const cards: Card[] = [
       "While not legally mandatory, a clear agreement reduces misunderstandings and prevents",
     description:
       "disputes if circumstances change.",
-    image: "/img/img12.png",
+    image: "/img/Living_together_agreement5.png",
   },
   {
     title: "Our Service",
@@ -34,7 +34,7 @@ const cards: Card[] = [
       "At Family McKenzie, we guide you through the process: explaining your rights, drafting a ",
     description:
       "tailored agreement, and ensuring both partners fully understand their responsibilities.",
-    image: "/img/img12.png",
+    image: "/img/Living_together_agreement3.png",
   },
   {
     title: "The Benefits",
@@ -42,7 +42,7 @@ const cards: Card[] = [
       "A Living Together Agreement provides clarity, security, and peace of mind—allowing you to ",
     description:
       "enjoy your relationship without uncertainty.",
-    image: "/img/img12.png",
+    image: "/img/Living_together_agreement2.png",
   },
   {
     title: "Our Approach",
@@ -50,7 +50,7 @@ const cards: Card[] = [
       "We combine legal expertise with practical, empathetic advice to help you protect your ",
     description:
       "future while building a life together.",
-    image: "/img/img12.png",
+    image: "/img/Living_together_agreement1.png",
   },
 ];
 
@@ -171,7 +171,7 @@ const AttorneyHero: React.FC = () => {
         <div className="flex items-center justify-center gap-3 sm:gap-5 md:gap-6 flex-wrap">
           {/* Left line */}
           <svg
-            className="w-12 sm:w-20 md:w-[107px]"
+            className="hidden sm:block sm:w-20 md:w-[107px]"
             viewBox="0 0 107 12"
             fill="none"
           >
@@ -181,13 +181,13 @@ const AttorneyHero: React.FC = () => {
             />
           </svg>
 
-          <h2 className="text-lg sm:text-3xl md:text-4xl lg:text-6xl marcellus text-center whitespace-nowrap">
+          <h2 className="text-[24px] sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl marcellus text-center whitespace-nowrap">
             LIVING TOGETHER AGREEMENT
           </h2>
 
           {/* Right line */}
           <svg
-            className="w-12 sm:w-20 md:w-[107px]"
+            className="hidden sm:block sm:w-20 md:w-[107px]"
             viewBox="0 0 107 12"
             fill="none"
           >
@@ -199,7 +199,7 @@ const AttorneyHero: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className="text-center uppercase text-[16px] tracking-[3px] font-bold text-[#BF9874] mt-3 archivo">
+        <p className="text-center uppercase text-[10px] sm:text-[14px] md:text-[16px] tracking-[3px] font-bold text-[#BF9874] mt-3 archivo">
           Build a Secure Future Together
         </p>
 

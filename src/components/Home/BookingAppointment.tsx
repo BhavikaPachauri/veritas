@@ -36,7 +36,7 @@ const InquirySection: React.FC = () => {
 
                     {/* Left Line */}
                     <svg
-                        className="w-12 sm:w-20 md:w-[107px] h-auto"
+                        className="hidden sm:block sm:w-20 md:w-[107px] h-auto"
                         viewBox="0 0 107 12"
                         fill="none"
                     >
@@ -44,14 +44,14 @@ const InquirySection: React.FC = () => {
                     </svg>
 
                     {/* Text */}
-                    <h2 className="text-sm sm:text-xl md:text-3xl lg:text-6xl 
+                    <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-6xl 
                         marcellus text-[#001025] text-center whitespace-nowrap" style={{ fontWeight: 500 }}>
                         BOOK AN APPOINTMENT
                     </h2>
 
                     {/* Right Line */}
                     <svg
-                        className="w-12 sm:w-20 md:w-[107px] h-auto"
+                        className="hidden sm:block sm:w-20 md:w-[107px] h-auto"
                         viewBox="0 0 107 12"
                         fill="none"
                     >
@@ -60,7 +60,7 @@ const InquirySection: React.FC = () => {
 
                 </div>
 
-                <p className="text-center text-[16px] archivo tracking-[3px] text-[#BF9874] mt-4">
+                <p className="text-center text-[10px] md:text-[16px] archivo tracking-[3px] text-[#BF9874] mt-4">
                     WE WOULD LOVE TO WORK WITH YOU
                 </p>
 
@@ -120,7 +120,7 @@ const InquirySection: React.FC = () => {
                             <span
                                 className="border border-[#001025]  absolute inset-0 w-full h-full   opacity-10 bg-[#FFF]"
                             ></span>
-                            <span className=" archivo font-bold  flex items-center justify-center gap-2  relative text-[#001025] text-base group-hover:text-white">
+                            <span className=" archivo font-bold  flex items-center justify-center gap-2  relative text-[#001025]  text-sm  md:text-base group-hover:text-white">
                                 <p>REQUEST AN APPOINTMENT</p>
                                 
                             </span>

@@ -212,7 +212,7 @@ const ExpertiseItemWrapper: React.FC<Item> = ({ title, subtitle, description }) 
 
             {/* Description: slides in from above, fades in */}
             <p
-              className="text-gray-400 text-lg leading-relaxed flex-1"
+              className="text-gray-400 text-base md:text-lg leading-relaxed flex-1"
               style={{
                 opacity: hovered ? 1 : 0,
                 transform: hovered ? "translateY(0px)" : "translateY(-16px)",

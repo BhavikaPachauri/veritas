@@ -14,3 +14,14 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+@keyframes blinkColor {
+  0%, 100% {
+    background-color: #28476F;
+    transform: scale(1);
+  }
+
+  50% {
+    background-color: #466A98;
+    transform: scale(1.08);
+  }
+}

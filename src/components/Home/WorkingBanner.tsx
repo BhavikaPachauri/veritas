@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 const WorkingBanner: React.FC = () => {
   return (
     <section
-      className="relative w-full min-h-[85vh] flex items-center justify-center bg-cover bg-center"
+      className="relative w-full min-h-[50vh] md:min-h-[85vh] flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: "url('/img/supreme-court.png')" }}
     >
       {/* Overlay */}
@@ -11,7 +11,7 @@ const WorkingBanner: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 md:px-10 max-w-7xl">
-        <p className="text-white marcellus text-3xl uppercase sm:text-xl md:text-7xl mb-4">
+        <p className="text-white marcellus text-3xl uppercase sm:text-xl md:text-5xl lg:text-6xl xl:text-7xl mb-4">
           Ready to Discuss Your Case.
           Schedule a Meeting Today
         </p>

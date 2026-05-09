@@ -41,11 +41,11 @@ export default function Faq() {
             <div className="w-full max-w-3xl text-center px-4">
 
                 {/* Heading */}
-                <h1 className="text-2xl sm:text-4xl md:text-6xl marcellus tracking-wide text-[#1c2b39]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl marcellus tracking-wide text-[#1c2b39]">
                     IMPORTANT ANSWER
                 </h1>
 
-                <p className="text-[16px] archivo tracking-[4px] text-[#BF9874] mt-3 mb-10 uppercase" style={{fontWeight:500}}>
+                <p className="text-[12px] md:text-[16px] archivo tracking-[4px] text-[#BF9874] mt-3 mb-10 uppercase" style={{fontWeight:500}}>
                     Our past & our future
                 </p>
 
@@ -62,7 +62,7 @@ export default function Faq() {
                                 onClick={() => toggle(index)}
                                 className={`w-full flex justify-between items-center pt-4 ${openIndex === index ? 'pb-0' : 'pb-5'} text-sm md:text-base`}
                             >
-                                <span className="font-medium text-center mb-1 w-full archivo text-lg"  style={{fontWeight:500}}>
+                                <span className="font-medium text-center mb-1 w-full archivo text-base  md:text-lg"  style={{fontWeight:500}}>
                                     {item.title}
                                 </span>
                                 <span className="ml-2 text-[#c8a27a]">

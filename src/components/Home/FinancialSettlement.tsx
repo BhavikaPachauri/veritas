@@ -14,25 +14,26 @@ function Testimonials() {
             {/* Layout */}
             <div className="flex flex-col md:grid md:grid-cols-2 min-h-[500px]">
 
-                {/* ✅ LEFT SIDE — FIXED */}
-                <div className="relative w-full h-full min-h-[500px] hidden md:block">
 
-                    <img
-                        src="/img/Financial_settlement.png"
-                        alt="Financial Settlement"
-                        className="absolute inset-0 w-[550px] h-full object-cover"
-                    />
+                <div className="relative grid grid-cols-2  w-full h-full min-h-[350px] md:min-h-[400] lg:min-h-[500px] ">
+                    <div className="z-10">
+                        <img
+                            src="/img/Financial_settlement.png"
+                            alt="Financial Settlement"
+                            className="absolute inset-0 w-full h-[50vh]   lg:w-[550px] md:h-full object-cover"
+                        />
+                    </div>
 
-
-
-                    {/* Arrow */}
-                    <div className="absolute top-20 right-10 lg:right-8 flex items-center">
+                    <div className="hidden  xl:block absolute top-20 overflow-hidden right-10 lg:right-8 xl:right-8 flex items-center">
                         <svg width="180" height="12" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 4.77344C0.447723 4.77344 0 5.22115 0 5.77344C0 6.32572 0.447723 6.77344 1 6.77344V4.77344ZM199.774 5.77344L194 -6.53267e-05L188.226 5.77344L194 11.5469L199.774 5.77344ZM1 6.77344L194 6.77344V4.77344L1 4.77344V6.77344Z" fill="#BF9874" />
                         </svg>
 
                     </div>
                 </div>
+
+
+
 
                 {/* RIGHT CONTENT */}
                 <div className="relative z-10 px-6 sm:px-10 md:px-8 lg:px-12 py-14 md:py-16 lg:py-20 flex flex-col justify-center">
@@ -50,23 +51,23 @@ function Testimonials() {
                     </h2>
 
                     {/* Content */}
-                    <p className="text-base text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
+                    <p className="text-sm md:text-base text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
                         What We Can Help With
                     </p>
 
-                    <p className="text-base text-white  max-w-lg leading-7 archivo">
+                    <p className="text-sm md:text-base text-white  max-w-lg leading-7 archivo">
                         From the family home and savings to pensions, debts, and spousal maintenance, we guide you through dividing assets fairly, practically, and with your future in mind.
                     </p>
 
-                    <p className="text-base text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
+                    <p className="text-sm md:text-base text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
                         How We Help
                     </p>
 
-                    <p className="text-base text-white  max-w-lg leading-7 archivo">
+                    <p className="text-sm md:text-base text-white  max-w-lg leading-7 archivo">
                         Whether your separation is amicable or complex, we'll clarify your rights, support negotiations, and prepare a legally binding Consent Order — protecting you from future claims.
                     </p>
 
-                    
+
                 </div>
             </div>
         </div>

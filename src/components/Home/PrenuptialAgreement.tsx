@@ -30,7 +30,7 @@ const VeritasHighlight: React.FC = () => {
         <div className="text-left max-w-4xl py-8 sm:py-10 md:py-16 px-4 sm:px-6 md:px-10">
 
           {/* Title */}
-          <h2 className="text-2xl sm:text-4xl md:text-5xl uppercase font-serif text-[#001025] tracking-wide marcellus">
+          <h2 className="text-[26px] sm:text-4xl md:text-5xl uppercase font-serif text-[#001025] tracking-wide marcellus">
             Prenuptial Agreements
           </h2>
 

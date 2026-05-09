@@ -29,9 +29,9 @@ const ExpertiseIntro = () => {
                         <span className="text-4xl sm:text-5xl text-[#c8a96a] leading-none marcellus flex-shrink-0 mt-2 ">
                             O
                         </span>
-                        <p className="mt-2 max-w-[400px] text-justify archivo">ur comprehensive legal guide is designed to help you: Understand your rights and legal options while exploring practical solutions tailored to your situation. Make informed decisions with confidence as you navigate family law with clarity, care, and the support you need.
-                        <p className="mt-2 max-w-md text-justify archivo">Family law matters are deeply personal, and no two situations are ever the same. Whether you're facing a divorce, a custody dispute, or a financial settlement, having the right information at the right time makes all the difference. We're here to simplify the legal process, so you never have to face it alone.</p>
-                        <p className="mt-2 max-w-md text-justify archivo">
+                        <p className="mt-2 text-sm md:text-base max-w-xl md:max-w-2xl lg:max-w-[400px] text-justify archivo">ur comprehensive legal guide is designed to help you: Understand your rights and legal options while exploring practical solutions tailored to your situation. Make informed decisions with confidence as you navigate family law with clarity, care, and the support you need.
+                        <p className="mt-2 text-sm md:text-base max-w-xl md:max-w-2xl lg:max-w-md text-justify archivo">Family law matters are deeply personal, and no two situations are ever the same. Whether you're facing a divorce, a custody dispute, or a financial settlement, having the right information at the right time makes all the difference. We're here to simplify the legal process, so you never have to face it alone.</p>
+                        <p className="mt-2 text-sm md:text-base max-w-xl md:max-w-2xl lg:max-w-md text-justify archivo">
                          From your first question to your final resolution, our guide walks you through every step — offering honest, straightforward advice that puts your family's wellbeing first
                         </p>    
                         </p>
