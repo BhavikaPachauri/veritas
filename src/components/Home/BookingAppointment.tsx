@@ -2,7 +2,7 @@ import React from "react";
 
 const InquirySection: React.FC = () => {
     return (
-        <section className="relative bg-[#f4f4f4] py-24 px-4 overflow-hidden">
+        <section id="contact" className="relative bg-[#f4f4f4] py-24 px-4 overflow-hidden">
 
 
             <div className="hidden md:block absolute right-0 bottom-0 ">
@@ -32,7 +32,7 @@ const InquirySection: React.FC = () => {
 
                 </div> */}
 
-                <div className="flex items-center justify-center  gap-3 sm:gap-5 md:gap-6 flex-wrap">
+                <div className="flex items-center justify-center  gap-3 sm:gap-5 md:gap-6 ">
 
                     {/* Left Line */}
                     <svg
@@ -44,8 +44,8 @@ const InquirySection: React.FC = () => {
                     </svg>
 
                     {/* Text */}
-                    <h2 className="text-sm sm:text-xl md:text-3xl lg:text-5xl 
-        marcellus text-[#0f1b2d] text-center whitespace-nowrap">
+                    <h2 className="text-sm sm:text-xl md:text-3xl lg:text-6xl 
+                        marcellus text-[#001025] text-center whitespace-nowrap" style={{ fontWeight: 500 }}>
                         BOOK AN APPOINTMENT
                     </h2>
 
@@ -60,7 +60,7 @@ const InquirySection: React.FC = () => {
 
                 </div>
 
-                <p className="text-center text-[12px] archivo tracking-[3px] text-[#BF9874] mt-4">
+                <p className="text-center text-[16px] archivo tracking-[3px] text-[#BF9874] mt-4">
                     WE WOULD LOVE TO WORK WITH YOU
                 </p>
 
@@ -72,24 +72,22 @@ const InquirySection: React.FC = () => {
                         <input
                             type="text"
                             placeholder="Full Name"
-                            className="bg-transparent border-b border-[#BF9874] pb-2 text-sm archivo outline-none placeholder:text-gray-500 placeholder:italic"
+                            className="bg-transparent border-b border-[#BF9874]  text-sm archivo outline-none placeholder:text-gray-500 placeholder:italic"
                         />
                         <input
                             type="email"
                             placeholder="E-mail"
-                            className="bg-transparent border-b border-[#BF9874] pb-2 text-sm archivo outline-none placeholder:text-gray-500 placeholder:italic"
+                            className="bg-transparent border-b border-[#BF9874]  text-sm  lg:text-base archivo outline-none placeholder:text-gray-500 placeholder:italic"
                         />
                     </div>
 
                     {/* Business Dropdown */}
-                    <div>
-                        <select
-                            className="w-full bg-transparent border-b border-[#BF9874] pb-2 text-sm archivo outline-none text-gray-600 placeholder:italic"
-                        >
-                            <option>Business</option>
-                            <option>Legal</option>
-                            <option>Finance</option>
-                        </select>
+                    <div className="relative">
+                        <textarea
+                            placeholder="Business"
+                            rows={2}
+                            className="w-full bg-transparent border-b border-[#BF9874]  text-sm lg:text-base archivo outline-none placeholder:text-gray-500 placeholder:italic resize-none"
+                        />
                     </div>
 
                     {/* Message */}
@@ -97,7 +95,7 @@ const InquirySection: React.FC = () => {
                         <textarea
                             placeholder="Message"
                             rows={2}
-                            className="w-full bg-transparent border-b border-[#BF9874] pb-2 text-sm archivo outline-none placeholder:text-gray-500 placeholder:italic resize-none"
+                            className="w-full bg-transparent border-b border-[#BF9874]  text-sm  lg:text-base archivo outline-none placeholder:text-gray-500 placeholder:italic resize-none"
                         />
 
 
@@ -105,11 +103,27 @@ const InquirySection: React.FC = () => {
 
                     {/* Button */}
                     <div className="flex justify-center mt-10">
-                        <button
+                        {/* <button
                             type="submit"
                             className="border archivo font-bold border-[#001025] px-6 py-2 text-[10px] md:text-[14px] tracking-[2px] text-[#001025] hover:bg-[#0f1b2d] hover:text-white transition-all duration-300"
+                            style={{fontWeight:600}}
                         >
                             REQUEST AN APPOINTMENT
+                        </button> */}
+                        <button
+                            className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white border border-[#001025]  group "
+                        >
+                            <span
+                                className="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#001025] rounded-full group-hover:w-76 group-hover:h-76  group-hover:text-white"
+                            ></span>
+
+                            <span
+                                className="border border-[#001025]  absolute inset-0 w-full h-full   opacity-10 bg-[#FFF]"
+                            ></span>
+                            <span className=" archivo font-bold  flex items-center justify-center gap-2  relative text-[#001025] text-base group-hover:text-white">
+                                <p>REQUEST AN APPOINTMENT</p>
+                                
+                            </span>
                         </button>
                     </div>
 

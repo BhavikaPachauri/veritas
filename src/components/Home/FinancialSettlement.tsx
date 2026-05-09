@@ -39,45 +39,34 @@ function Testimonials() {
 
                     {/* Label */}
                     <div className="flex items-center gap-3 mb-6">
-                        <span className="text-[10px] sm:text-[11px] tracking-[3px] text-[#BF9874] uppercase archivo">
+                        <span className="text-[10px] sm:text-[11px] lg:text-[16px] tracking-[3px] text-[#BF9874] uppercase archivo">
                             Ending a relationship is hard—finances shouldn’t be.
                         </span>
                     </div>
 
                     {/* Heading */}
-                    <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl text-white leading-tight marcellus">
+                    <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl uppercase text-white leading-tight marcellus">
                         Financial Settlements
                     </h2>
 
                     {/* Content */}
-                    <p className="text-sm text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
+                    <p className="text-base text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
                         What We Can Help With
                     </p>
 
-                    <p className="text-sm text-white mt-2 max-w-sm leading-7 archivo">
+                    <p className="text-base text-white  max-w-lg leading-7 archivo">
                         From the family home and savings to pensions, debts, and spousal maintenance, we guide you through dividing assets fairly, practically, and with your future in mind.
                     </p>
 
-                    <p className="text-sm text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
+                    <p className="text-base text-[#829BBC] mt-6 max-w-sm leading-7 archivo">
                         How We Help
                     </p>
 
-                    <p className="text-sm text-white mt-2 max-w-sm leading-7 archivo">
+                    <p className="text-base text-white  max-w-lg leading-7 archivo">
                         Whether your separation is amicable or complex, we'll clarify your rights, support negotiations, and prepare a legally binding Consent Order — protecting you from future claims.
                     </p>
 
-                    {/* Controls */}
-                    <div className="flex items-center gap-3 mt-10">
-                        <svg width="40" height="24" viewBox="0 0 58 24" fill="none">
-                            <path
-                                d="M55.5469 13.5469C56.6514 13.5469 57.5469 12.6514 57.5469 11.5469C57.5469 10.4423 56.6514 9.54688 55.5469 9.54688V13.5469ZM-0.000130653 11.5469L11.5469 23.0939L23.0939 11.5469L11.5469 -0.000130653L-0.000130653 11.5469ZM55.5469 9.54688H11.5469V13.5469H55.5469V9.54688Z"
-                                fill="#BF9874"
-                            />
-                        </svg>
-
-                        <div className="w-2 h-2 bg-white rotate-45" />
-                        <div className="w-2 h-2 bg-white rotate-45" />
-                    </div>
+                    
                 </div>
             </div>
         </div>

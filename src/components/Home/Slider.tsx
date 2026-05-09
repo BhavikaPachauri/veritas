@@ -14,7 +14,7 @@ const stats: StatItem[] = [
 
 const ArrowDivider = () => (
   <svg
-    className="h-16 md:h-20 w-3"
+    className="h-16 md:h-24 w-3"
     viewBox="0 0 12 140"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -29,18 +29,18 @@ const ArrowDivider = () => (
 const Slider: React.FC = () => {
   return (
     <section className="w-full bg-[#1f3554] pb-8 md:pb-10">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-1">
         {/* Desktop */}
-        <div className="hidden md:grid grid-cols-4 gap-8 items-center">
+        <div className="hidden md:grid grid-cols-4 gap-3 items-center">
           {stats.map((item, index) => (
-            <div key={index} className="flex items-center justify-center gap-3">
-              <span className="marcellus text-[#BF9874] text-2xl lg:text-4xl font-semibold">
+            <div key={index} className="flex items-end  justify-center gap-3">
+              <span className="marcellus text-[#BF9874] mb-3 text-2xl lg:text-4xl font-semibold">
                 {item.value}
               </span>
 
               <ArrowDivider />
 
-              <span className="archivo text-white text-sm lg:text-lg whitespace-nowrap">
+              <span className="archivo text-white text-sm lg:text-lg mb-4 whitespace-nowrap">
                 {item.label}
               </span>
             </div>

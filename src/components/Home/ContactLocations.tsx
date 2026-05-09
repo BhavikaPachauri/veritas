@@ -26,8 +26,8 @@ const locations: Location[] = [
 
 const ContactLocations: React.FC = () => {
     return (
-        <section className="bg-[#cfd5dd] py-8 px-4">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <section className="bg-[#EAF1FA] py-8 px-4">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
 
                 {locations.map((loc, index) => (
                     <div
@@ -36,10 +36,10 @@ const ContactLocations: React.FC = () => {
                     >
                         {/* Content */}
                         <div className="text-center archivo">
-                            <h3 className="text-[15px] font-medium text-[#001025]">
+                            <h3 className="text-[20px] font-medium  text-[#001025]">
                                 {loc.country}
                             </h3>
-                            <p className="text-[13px] text-[#667C99] mt-1">
+                            <p className="text-[16px] text-[#667C99] mt-1">
                                 {loc.email}
                             </p>
                         </div>

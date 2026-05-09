@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 1 */}
                 <div>
-                    <h3 className="text-sm font-semibold mb-4">Expertise</h3>
+                    <h3 className="text-base font-semibold mb-4">Expertise</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
                         <li><a href="#" className="hover:text-white transition">Divorce & Separation</a></li>
                         <li><a href="#" className="hover:text-white transition">Financial Settlement</a></li>
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 2 */}
                 <div>
-                    <h3 className="text-sm font-semibold mb-4">World Offices</h3>
+                    <h3 className="text-base font-semibold mb-4">World Offices</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
                         <li>London, United Kingdom</li>
                         <li>Edinburgh, Scotland</li>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 3 */}
                 <div>
-                    <h3 className="text-sm font-semibold mb-4">FAQ</h3>
+                    <h3 className="text-base font-semibold mb-4">FAQ</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
                         {[
                             "How do I start a divorce?",
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 4 */}
                 <div>
-                    <h3 className="text-sm font-semibold mb-4">Quick Links</h3>
+                    <h3 className="text-base font-semibold mb-4">Quick Links</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
                         <li><a href="#" className="hover:text-white transition">About Our Firm</a></li>
                         <li><a href="#" className="hover:text-white transition">Meet the Team</a></li>
@@ -66,26 +66,10 @@ const Footer: React.FC = () => {
                 </div>
             </div>
 
-            {/* CTA Section */}
-            <div className="max-w-6xl mx-auto px-6 pb-10 
-                flex flex-col md:flex-row gap-6 
-                justify-between items-start md:items-center">
-
-                <h2 className="text-lg md:text-xl marcellus leading-snug max-w-md">
-                    HIRE ONE OF OUR PROFESSIONAL <br />
-                    LEGAL EXPERT NOW
-                </h2>
-
-                <p className="text-sm">
-                    Emergency Call{" "}
-                    <a href="tel:+442083990000" className="text-[#BF9874] hover:underline">
-                        +44 208 399 0000
-                    </a>
-                </p>
-            </div>
+           
 
             {/* Bottom Bar */}
-            <div className="bg-[#cfd5dd] text-[#1a2a3a] text-xs py-3">
+            <div className="bg-[#cfd5dd] text-[#667C99] text-base py-3">
                 <div className="max-w-6xl mx-auto px-6 flex justify-center">
                     <span className="text-center">
                         Copyright @2026 Family Mckenzie, All Rights Reserved

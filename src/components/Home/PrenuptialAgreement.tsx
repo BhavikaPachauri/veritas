@@ -30,21 +30,24 @@ const VeritasHighlight: React.FC = () => {
         <div className="text-left max-w-4xl py-8 sm:py-10 md:py-16 px-4 sm:px-6 md:px-10">
 
           {/* Title */}
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-[#001025] tracking-wide marcellus">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl uppercase font-serif text-[#001025] tracking-wide marcellus">
             Prenuptial Agreements
           </h2>
 
           {/* Subtitle */}
-          <p className="mt-4 text-xs sm:text-sm md:text-base tracking-wide uppercase text-[#001025] archivo">
+          <p className="mt-4 text-xs sm:text-sm md:text-base lg:text-md tracking-wide font-black uppercase text-[#001025] archivo"
+          style={{fontWeight: 600}}>
             Marriage is a beautiful commitment.<br />
             A prenuptial agreement helps you protect it.
           </p>
 
           {/* Section 1 */}
-          <p className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-[#667C99] font-bold leading-relaxed archivo">
+          <p className="mt-6 text-sm sm:text-base md:text-lg  text-[#667C99] font-black leading-relaxed archivo"
+          style={{fontWeight: 700}}>
             What They Cover
           </p>
-          <p className="mt-1 text-sm sm:text-base text-[#667C99] leading-relaxed archivo">
+          <p className=" text-sm sm:text-base text-[#667C99] leading-relaxed archivo"
+          style={{fontWeight: 400}}>
             Prenups are legal documents that set out how assets, property,
             savings, and pensions will be divided if your relationship ends.
             They safeguard business investments and prevent disputes over
@@ -52,21 +55,23 @@ const VeritasHighlight: React.FC = () => {
           </p>
 
           {/* Section 2 */}
-          <p className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-[#667C99] font-bold leading-relaxed archivo">
+          <p className="mt-6 text-sm sm:text-base md:text-lg text-[#667C99] font-extrabold leading-relaxed archivo"
+          style={{fontWeight: 700}}>
             Why They Matter
           </p>
-          <p className="mt-1 text-sm sm:text-base text-[#667C99] leading-relaxed archivo">
+          <p style={{fontWeight: 400}} className="text-sm sm:text-base text-[#667C99] leading-relaxed archivo">
             UK courts are more likely to uphold prenups that are fair, clear,
             and supported by independent legal advice from both parties. This
             reduces future conflict and gives you both clarity and confidence.
           </p>
 
           {/* Button */}
-          <div className="mt-8">
-            <button className="border border-[#001025] text-[#001025] font-medium text-xs sm:text-sm px-6 py-3 uppercase tracking-wide hover:bg-[#001025] hover:text-white transition archivo">
+          {/* <div className="mt-8">
+            <button className="border border-[#001025] text-[#001025] font-black text-xs sm:text-sm px-6 py-3 uppercase tracking-wide  transition archivo"
+            style={{fontWeight: 700}}>
               Request an Appointment
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
