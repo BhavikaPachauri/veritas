@@ -1,27 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap');
-
 .marcellus {
   font-family: "Marcellus", serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 .archivo {
   font-family: "Archivo", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; 
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  font-weight: 400;
 }
+
 @keyframes blinkColor {
-  0%, 100% {
-    background-color: #28476F;
+  0%,
+  100% {
+    background-color: #28476f;
     transform: scale(1);
   }
 
   50% {
-    background-color: #466A98;
+    background-color: #466a98;
     transform: scale(1.08);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #001025;
+}
+
+main section[id] {
+  scroll-margin-top: 7rem;
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #bf9874;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -9,19 +9,19 @@ const features: Feature[] = [
   {
     title: "TRUSTED EXPERTS",
     subtitle: "Professional Legal Guidance",
-    icon: "/img/img15.png",
+    icon: "/img/legalTop2.png",
     bg: "bg-[#FFFFFF]",
   },
   {
     title: "CLIENT FIRST",
     subtitle: "Clear & Honest Support",
-    icon: "/img/img14.png",
+    icon: "/img/Legaltop1.png",
     bg: "bg-[#F9F8F8]",
   },
   {
     title: "PROVEN SUPPORT",
     subtitle: "Focused on Your Rights",
-    icon: "/img/img16.png",
+    icon: "/img/legalTop3.png",
     bg: "bg-[#F2F0F0]",
   },
 ];
@@ -29,33 +29,36 @@ const features: Feature[] = [
 const LegalTopBar = () => {
   return (
     <section className="w-full">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {features.map((item, index) => (
             <div
               key={index}
-              className={`
-                flex items-center gap-4
-                px-6 py-5
-                ${item.bg}
-                md:bg-white
-                border-t border-[#949393]
-                lg:border-transparent
-              `}
+              className={`flex items-center gap-4 border-t border-[#949393] px-6 py-5 md:bg-white lg:border-transparent ${item.bg}`}
             >
-              {/* Icon */}
-              <div className="flex items-center justify-center shrink-0">
+              <div className="flex shrink-0 items-center justify-center">
                 <img
                   src={item.icon}
                   alt={item.title}
-                  className="w-16 h-14 object-contain"
+                  className="h-14 w-16 object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
-              {/* Text */}
               <div>
-                <h3 className="text-[16px] md:text-[20px] font-bold tracking-wide text-[#001025] archivo" style={{ fontWeight: 500 }}> {item.title} </h3>
-                <p className="text-[12px] md:text-[14px] text-[#808080] archivo" style={{ fontWeight: 500 }}> {item.subtitle} </p>
+                <h3
+                  className="archivo text-[16px] font-bold tracking-wide text-[#001025] md:text-[20px]"
+                  style={{ fontWeight: 500 }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className="archivo text-[12px] text-[#808080] md:text-[14px]"
+                  style={{ fontWeight: 500 }}
+                >
+                  {item.subtitle}
+                </p>
               </div>
             </div>
           ))}
