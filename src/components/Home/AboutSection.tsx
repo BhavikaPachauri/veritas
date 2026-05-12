@@ -4,7 +4,7 @@ function AboutSection() {
       <div className="relative h-[40vh] overflow-hidden md:h-[70vh]">
         <img
           src="/img/img1.png"
-          alt=""
+          alt="Law Order "
           aria-hidden="true"
           className="h-full w-full object-cover"
           loading="lazy"

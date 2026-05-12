@@ -26,7 +26,7 @@ const WorkingBanner: React.FC = () => {
             <span className="uppercase">Schedule</span>
           </span>
         </a>
-      </div>
+      </div> 
     </section>
   );
 };
