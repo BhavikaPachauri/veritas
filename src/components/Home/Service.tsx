@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type Item = {
   title: string;
@@ -48,6 +48,7 @@ const rightItems: Item[] = [
   },
 ];
 
+// Grey ↘ arrow — shown when item is closed
 const DefaultArrow = () => (
   <svg
     width="39"
@@ -55,7 +56,6 @@ const DefaultArrow = () => (
     viewBox="0 0 39 39"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
   >
     <defs>
       <linearGradient
@@ -103,6 +103,7 @@ const DefaultArrow = () => (
   </svg>
 );
 
+// Gold ↗ arrow — shown in expanded body bottom-right
 const HoverArrow = () => (
   <svg
     width="39"
@@ -110,7 +111,6 @@ const HoverArrow = () => (
     viewBox="0 0 39 39"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
   >
     <defs>
       <linearGradient
@@ -171,6 +171,7 @@ const ExpertiseItemWrapper: React.FC<Item> = ({
     };
 
     checkScreen();
+
     window.addEventListener("resize", checkScreen);
 
     return () => window.removeEventListener("resize", checkScreen);
@@ -178,51 +179,39 @@ const ExpertiseItemWrapper: React.FC<Item> = ({
 
   return (
     <div
-      className="border-b border-[#BF9874]"
+      className="border-b border-[#BF9874] cursor-pointer"
       onMouseEnter={() => {
-        if (!isMobile) {
-          setActive(true);
-        }
+        if (!isMobile) setActive(true);
       }}
       onMouseLeave={() => {
-        if (!isMobile) {
-          setActive(false);
-        }
+        if (!isMobile) setActive(false);
+      }}
+      onClick={() => {
+        if (isMobile) setActive((prev) => !prev);
       }}
     >
-      <button
-        type="button"
-        className="flex w-full items-center justify-between gap-4 py-7 text-left"
-        aria-expanded={active}
-        onClick={() => setActive((prev) => !prev)}
-        onFocus={() => {
-          if (!isMobile) {
-            setActive(true);
-          }
-        }}
-        onBlur={() => {
-          if (!isMobile) {
-            setActive(false);
-          }
-        }}
-      >
-        <div className="min-w-0 flex-1">
-          <h3 className="text-sm font-medium leading-snug text-white sm:text-base md:text-lg lg:text-xl">
+      {/* Header */}
+      <div className="flex items-center justify-between gap-4 py-7">
+        <div className="flex-1 min-w-0">
+          <h3 className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-snug">
             {title}
           </h3>
 
-          <p className="mt-[6px] text-xs text-[#829BBC] lg:text-md">
+          <p className="text-[#829BBC] text-xs lg:text-md mt-[6px]">
             {subtitle}
           </p>
         </div>
 
-        <div className="relative h-[39px] w-[39px] flex-shrink-0">
+        {/* Default arrow */}
+        <div className="flex-shrink-0 relative w-[39px] h-[39px]">
           <div
             style={{
               position: "absolute",
               inset: 0,
               opacity: active ? 0 : 1,
-              transform: active ? "translateY(-16px)" : "translateY(0px)",
+              transform: active
+                ? "translateY(-16px)"
+                : "translateY(0px)",
               transition:
                 "opacity 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1)",
             }}
@@ -230,22 +219,27 @@ const ExpertiseItemWrapper: React.FC<Item> = ({
             <DefaultArrow />
           </div>
         </div>
-      </button>
+      </div>
 
+      {/* Accordion body */}
       <div
         style={{
           display: "grid",
           gridTemplateRows: active ? "1fr" : "0fr",
-          transition: "grid-template-rows 0.6s cubic-bezier(0.4,0,0.2,1)",
+          transition:
+            "grid-template-rows 0.6s cubic-bezier(0.4,0,0.2,1)",
         }}
       >
         <div style={{ minHeight: 0, overflow: "hidden" }}>
           <div className="flex items-end justify-between gap-4 pb-7">
+            {/* Description */}
             <p
-              className="flex-1 text-base leading-relaxed text-gray-400 md:text-lg"
+              className="text-gray-400 text-base md:text-lg leading-relaxed flex-1"
               style={{
                 opacity: active ? 1 : 0,
-                transform: active ? "translateY(0px)" : "translateY(-16px)",
+                transform: active
+                  ? "translateY(0px)"
+                  : "translateY(-16px)",
                 transition:
                   "opacity 0.55s cubic-bezier(0.4,0,0.2,1) 0.1s, transform 0.55s cubic-bezier(0.4,0,0.2,1) 0.1s",
               }}
@@ -253,11 +247,14 @@ const ExpertiseItemWrapper: React.FC<Item> = ({
               {description}
             </p>
 
+            {/* Gold arrow */}
             <div
               className="relative flex-shrink-0"
               style={{
                 opacity: active ? 1 : 0,
-                transform: active ? "translateY(0px)" : "translateY(24px)",
+                transform: active
+                  ? "translateY(0px)"
+                  : "translateY(24px)",
                 transition:
                   "opacity 0.55s cubic-bezier(0.4,0,0.2,1) 0.15s, transform 0.55s cubic-bezier(0.4,0,0.2,1) 0.15s",
               }}
@@ -275,31 +272,31 @@ const FieldsOfExpertise: React.FC = () => {
   return (
     <section
       id="services"
-      className="relative w-full overflow-hidden bg-[#001025] px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20 archivo"
+      className="relative w-full bg-[#001025] archivo py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 overflow-hidden"
     >
-      <div className="absolute bottom-0 right-0 hidden md:block">
+      {/* Background decorative image */}
+      <div className="hidden md:block absolute right-0 bottom-0">
         <img
-          src="/img/img7.webp"
-          alt="Decorative service section graphic"
-          aria-hidden="true"
-          className="w-[400px] object-contain md:w-[700px]"
-          loading="lazy"
-          decoding="async"
+          src="/img/img7.png"
+          alt="background"
+          className="object-contain w-[400px] md:w-[700px]"
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
-        <div className="mb-12 text-center md:mb-16">
-          <h2 className="marcellus text-3xl tracking-wide text-white sm:text-4xl md:text-6xl">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl marcellus sm:text-4xl md:text-6xl font-serif text-white tracking-wide">
             SERVICES
           </h2>
 
-          <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-[#c8a96a] sm:text-sm lg:text-base archivo">
+          <p className="mt-4 text-[10px] archivo sm:text-sm lg:text-base tracking-[0.3em] text-[#c8a96a] uppercase">
             Vision makes us who we are
           </p>
         </div>
 
-        <div className="relative grid grid-cols-1 md:grid-cols-2 md:gap-16">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16 relative">
           <div>
             {leftItems.map((item, index) => (
               <ExpertiseItemWrapper key={index} {...item} />
