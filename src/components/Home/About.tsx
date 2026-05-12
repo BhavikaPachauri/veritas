@@ -7,14 +7,14 @@ const ExpertiseIntro = () => {
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                     <div className="w-full h-[200px] sm:h-[280px] md:h-[340px] lg:h-[420px] overflow-hidden">
                         <img
-                            src="/img/img3.png"
+                            src="/img/img3.webp"
                             alt="Lawyers team"
                             className="w-full h-full object-cover"
                         />
                     </div>
                     <div className="w-full h-[200px] sm:h-[280px] md:h-[340px] lg:h-[420px] overflow-hidden">
                         <img
-                            src="/img/img4.png"
+                            src="/img/img4.webp"
                             alt="Handshake"
                             className="w-full h-full object-cover"
                         />

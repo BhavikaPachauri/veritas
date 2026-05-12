@@ -1,24 +1,7 @@
-import  { useEffect, useState } from "react";
-
-function Loader() {
-  const [showLoader, setShowLoader] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoader(false);
-    }, 2000); // 2 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!showLoader) return null;
-
+﻿function Loader() {
   return (
-    <>
-    <div className="h-full w-full bg-[#0A1525] flex items-center justify-center">
-
+    <div className="h-[100vh] w-full bg-[#0A1525] flex items-center justify-center">
       <div className="loader"></div>
-    </div>
 
       <style>{`
         .loader {
@@ -86,7 +69,7 @@ function Loader() {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 }
 

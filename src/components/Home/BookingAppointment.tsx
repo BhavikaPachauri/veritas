@@ -8,8 +8,8 @@ const InquirySection: React.FC = () => {
     >
       <div className="absolute bottom-0 right-0 hidden md:block">
         <img
-          src="/img/img7.png"
-          alt=""
+          src="/img/img7.webp"
+          alt="Appointment booking background illustration"
           aria-hidden="true"
           className="w-[400px] object-contain md:w-[800px]"
           loading="lazy"

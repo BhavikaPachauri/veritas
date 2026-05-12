@@ -279,8 +279,8 @@ const FieldsOfExpertise: React.FC = () => {
     >
       <div className="absolute bottom-0 right-0 hidden md:block">
         <img
-          src="/img/img7.png"
-          alt=""
+          src="/img/img7.webp"
+          alt="Decorative service section graphic"
           aria-hidden="true"
           className="w-[400px] object-contain md:w-[700px]"
           loading="lazy"

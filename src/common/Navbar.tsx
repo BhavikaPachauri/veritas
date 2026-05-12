@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const handleCall = () => {
     window.location.href = "tel:+442083990000";
@@ -14,6 +15,35 @@ function Navbar() {
     { id: "contact", label: "Book An Appointment" },
   ];
 
+  useEffect(() => {
+    const sections = navItems.map((item) =>
+      document.getElementById(item.id)
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      }
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <nav
       className="fixed left-0 top-0 z-50 w-full bg-white shadow-sm"
@@ -23,7 +53,7 @@ function Navbar() {
         <div className="flex-shrink-0">
           <a href="/#home" aria-label="Go to the top of the page">
             <img
-              src="/img/logo.png"
+              src="/img/logo.webp"
               alt="Family McKenzie logo"
               width="96"
               height="96"
@@ -38,18 +68,24 @@ function Navbar() {
           <div className="hidden items-center gap-2 border-b border-[#BF9874] px-6 py-4 text-[16px] text-[#001025] md:flex lg:px-10 archivo" />
 
           <div className="flex items-center justify-between px-4 py-2 sm:px-6 lg:px-10">
+            {/* Desktop Menu */}
             <div className="hidden items-center gap-6 text-[16px] font-medium md:flex lg:gap-10 archivo">
               {navItems.map((item) => (
                 <a
                   key={item.id}
                   href={`/#${item.id}`}
-                  className="cursor-pointer text-[#001025] transition-colors duration-300 hover:text-[#9F6907]"
+                  className={`cursor-pointer transition-colors duration-300 ${
+                    activeSection === item.id
+                      ? "text-[#9F6907]"
+                      : "text-[#001025] "
+                  }`}
                 >
                   {item.label}
                 </a>
               ))}
             </div>
 
+            {/* Call Button */}
             <div className="hidden md:block">
               <button
                 type="button"
@@ -58,6 +94,7 @@ function Navbar() {
                 className="relative inline-flex h-9 overflow-hidden p-[2px] focus:outline-none"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#1f6ef7_0%,#001025_50%,#d8de6a_100%)]" />
+
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center gap-2 bg-white px-7 text-sm font-medium text-[#001025] backdrop-blur-3xl">
                   <svg
                     width="18"
@@ -75,6 +112,7 @@ function Navbar() {
                       strokeLinejoin="round"
                     />
                   </svg>
+
                   +44 208 399 0000
                 </span>
               </button>
@@ -82,6 +120,7 @@ function Navbar() {
 
             <div className="flex-1 md:hidden" />
 
+            {/* Mobile Menu Button */}
             <button
               type="button"
               className="flex h-9 w-9 flex-col items-center justify-center gap-[5px] md:hidden"
@@ -91,22 +130,31 @@ function Navbar() {
               aria-label={open ? "Close menu" : "Open menu"}
             >
               <span
-                className={`block h-[2px] w-6 bg-black transition-all duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`}
+                className={`block h-[2px] w-6 bg-black transition-all duration-300 ${
+                  open ? "translate-y-[7px] rotate-45" : ""
+                }`}
               />
               <span
-                className={`block h-[2px] w-6 bg-black transition-all duration-300 ${open ? "opacity-0" : ""}`}
+                className={`block h-[2px] w-6 bg-black transition-all duration-300 ${
+                  open ? "opacity-0" : ""
+                }`}
               />
               <span
-                className={`block h-[2px] w-6 bg-black transition-all duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
+                className={`block h-[2px] w-6 bg-black transition-all duration-300 ${
+                  open ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
               />
             </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       <div
         id="mobile-navigation"
-        className={`overflow-hidden transition-all duration-300 md:hidden ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        className={`overflow-hidden transition-all duration-300 md:hidden ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <div className="flex flex-col space-y-4 border-t bg-white px-6 pb-6 pt-4">
           {navItems.map((item) => (
@@ -114,7 +162,11 @@ function Navbar() {
               key={item.id}
               href={`/#${item.id}`}
               onClick={() => setOpen(false)}
-              className="cursor-pointer text-[15px] text-[#001025] transition-colors duration-300 hover:text-[#9F6907]"
+              className={`cursor-pointer text-[15px] transition-colors duration-300 ${
+                activeSection === item.id
+                  ? "text-[#9F6907]"
+                  : "text-[#001025] "
+              }`}
             >
               {item.label}
             </a>

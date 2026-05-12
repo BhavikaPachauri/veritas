@@ -14,14 +14,14 @@ const cards: Card[] = [
       "These legal documents set out how property, finances, and responsibilities are shared while",
     description:
       "you live together, and what happens if the relationship ends. They address home ownership, bill contributions, savings or assets, and debt handling.",
-    image: "/img/Living_together_agreement4.png",
+    image: "/img/Living_together_agreement4.webp",
   },
   {
     title: "Why You Need One",
     subtitle:
       "While not legally mandatory, a clear agreement reduces misunderstandings and prevents",
     description: "disputes if circumstances change.",
-    image: "/img/Living_together_agreement5.png",
+    image: "/img/Living_together_agreement5.webp",
   },
   {
     title: "Our Service",
@@ -29,21 +29,21 @@ const cards: Card[] = [
       "At Family McKenzie, we guide you through the process: explaining your rights, drafting a",
     description:
       "tailored agreement, and ensuring both partners fully understand their responsibilities.",
-    image: "/img/Living_together_agreement3.png",
+    image: "/img/Living_together_agreement3.webp",
   },
   {
     title: "The Benefits",
     subtitle:
       "A Living Together Agreement provides clarity, security, and peace of mind, allowing you to",
     description: "enjoy your relationship without uncertainty.",
-    image: "/img/Living_together_agreement2.png",
+    image: "/img/Living_together_agreement2.webp",
   },
   {
     title: "Our Approach",
     subtitle:
       "We combine legal expertise with practical, empathetic advice to help you protect your",
     description: "future while building a life together.",
-    image: "/img/Living_together_agreement1.png",
+    image: "/img/Living_together_agreement1.webp",
   },
 ];
 
@@ -192,8 +192,8 @@ const AttorneyHero: React.FC = () => {
           <div className="flex flex-col items-center justify-center px-3 text-center">
             <div className="mb-5 text-xl text-[#BF9874]">
               <img
-                src="/img/balance.png"
-                alt=""
+                src="/img/balance.webp"
+                alt="Balance scale illustration representing legal balance"
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"

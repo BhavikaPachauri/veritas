@@ -7,8 +7,8 @@ function Hero() {
     <section id="home">
       <div className="relative flex min-h-[70vh] items-center overflow-hidden px-6 py-30 sm:px-10 md:min-h-[90vh] md:px-20 md:py-40 lg:px-32 lg:py-30 xl:py-24">
         <img
-          src="/img/img6.png"
-          alt=""
+          src="/img/img6.webp"
+          alt="Family law hero background image"
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
           loading="eager"

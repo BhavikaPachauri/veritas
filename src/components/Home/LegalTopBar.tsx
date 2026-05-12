@@ -9,19 +9,19 @@ const features: Feature[] = [
   {
     title: "TRUSTED EXPERTS",
     subtitle: "Professional Legal Guidance",
-    icon: "/img/legalTop2.png",
+    icon: "/img/legalTop2.webp",
     bg: "bg-[#FFFFFF]",
   },
   {
     title: "CLIENT FIRST",
     subtitle: "Clear & Honest Support",
-    icon: "/img/Legaltop1.png",
+    icon: "/img/Legaltop1.webp",
     bg: "bg-[#F9F8F8]",
   },
   {
     title: "PROVEN SUPPORT",
     subtitle: "Focused on Your Rights",
-    icon: "/img/legalTop3.png",
+    icon: "/img/legalTop3.webp",
     bg: "bg-[#F2F0F0]",
   },
 ];

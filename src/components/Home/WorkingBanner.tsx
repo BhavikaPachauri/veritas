@@ -2,8 +2,8 @@ const WorkingBanner: React.FC = () => {
   return (
     <section className="relative flex min-h-[50vh] w-full items-center justify-center overflow-hidden md:min-h-[85vh]">
       <img
-        src="/img/supreme-court.png"
-        alt=""
+        src="/img/supreme-court.webp"
+        alt="Supreme Court-inspired legal background"
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
         loading="lazy"

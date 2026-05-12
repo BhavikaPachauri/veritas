@@ -6,8 +6,8 @@ function Testimonials() {
     >
       <div className="pointer-events-none absolute bottom-0 right-0 hidden w-[40%] select-none md:block lg:w-[45%]">
         <img
-          src="/img/img7.png"
-          alt=""
+          src="/img/img7.webp"
+          alt="Decorative financial settlement graphic"
           className="h-full w-full object-contain object-bottom"
           loading="lazy"
           decoding="async"
@@ -18,7 +18,7 @@ function Testimonials() {
         <div className="relative grid min-h-[350px] w-full grid-cols-2 md:min-h-[400] lg:min-h-[500px]">
           <div className="z-10">
             <img
-              src="/img/Financial_settlement.png"
+              src="/img/Financial_settlement.webp"
               alt="Financial Settlement"
               className="absolute inset-0 h-[50vh] w-full object-cover md:h-full lg:w-[550px]"
               loading="lazy"

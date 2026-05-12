@@ -6,7 +6,7 @@ const VeritasHighlight: React.FC = () => {
       <div className="relative z-10 grid grid-cols-1 items-stretch md:grid-cols-2 md:gap-16">
         <div className="relative hidden h-full min-h-[400px] w-full md:block">
           <img
-            src="/img/Prenuptial.png"
+            src="/img/Prenuptial.webp"
             alt="Prenuptial"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
