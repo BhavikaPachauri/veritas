@@ -30,8 +30,6 @@ const Slider: React.FC = () => {
   return (
     <section className="w-full bg-[#1B314E] py-8 lg:py-0 lg:pb-10">
       <div className="max-w-7xl mx-auto px-4">
-
-        {/* Desktop */}
         <div className="hidden lg:grid grid-cols-4 gap-3 items-center">
           {stats.map((item, index) => (
             <div
@@ -58,8 +56,6 @@ const Slider: React.FC = () => {
               key={index}
               className="flex items-start gap-4 "
             >
-
-              {/* Number + Line */}
               <div className="flex flex-col items-center justify-center mt-2 ">
                 <span className="text-[#BF9874] text-[40px] leading-none marcellus">
                   {item.value}
@@ -72,8 +68,6 @@ const Slider: React.FC = () => {
 
                 )}
               </div>
-
-              {/* Content Box */}
               <div className="flex-1 mt-1">
                 <div className="border border-[#BD8115]/41 bg-[#0C203A]/30 px-3 py-3 text-center">
                   <span className="text-[#FFFFFF] text-[16px] archivo">

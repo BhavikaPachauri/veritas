@@ -1,6 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
+
+interface ContactForm {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const InquirySection: React.FC = () => {
+  const [formData, setFormData] = useState<ContactForm>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      const response = await fetch(
+        "https://erpapi.almoimpex.com/website-email/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Message sent successfully");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Server error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -55,18 +121,26 @@ const InquirySection: React.FC = () => {
           WE WOULD LOVE TO WORK WITH YOU
         </p>
 
-        <form className="mt-16 space-y-10" aria-label="Book an appointment form">
+        <form
+          onSubmit={handleSubmit}
+          className="mt-16 space-y-10"
+          aria-label="Book an appointment form"
+        >
           <div className="grid gap-10 md:grid-cols-2">
             <div>
               <label className="sr-only" htmlFor="full-name">
                 Full Name
               </label>
+
               <input
                 id="full-name"
-                name="fullName"
+                name="name"
                 type="text"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Full Name"
                 autoComplete="name"
+                required
                 className="w-full border-b border-[#BF9874] bg-transparent text-sm outline-none placeholder:italic placeholder:text-gray-500 archivo"
               />
             </div>
@@ -75,27 +149,35 @@ const InquirySection: React.FC = () => {
               <label className="sr-only" htmlFor="email">
                 Email Address
               </label>
+
               <input
                 id="email"
                 name="email"
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="E-mail"
                 autoComplete="email"
+                required
                 className="w-full border-b border-[#BF9874] bg-transparent text-sm outline-none placeholder:italic placeholder:text-gray-500 lg:text-base archivo"
               />
             </div>
           </div>
 
           <div>
-            <label className="sr-only" htmlFor="business-details">
-              Business Details
+            <label className="sr-only" htmlFor="subject">
+              Subject
             </label>
-            <textarea
-              id="business-details"
-              name="businessDetails"
+
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              value={formData.subject}
+              onChange={handleChange}
               placeholder="Business"
-              rows={2}
-              className="w-full resize-none border-b border-[#BF9874] bg-transparent text-sm outline-none placeholder:italic placeholder:text-gray-500 lg:text-base archivo"
+              required
+              className="w-full border-b border-[#BF9874] bg-transparent text-sm outline-none placeholder:italic placeholder:text-gray-500 lg:text-base archivo"
             />
           </div>
 
@@ -103,11 +185,15 @@ const InquirySection: React.FC = () => {
             <label className="sr-only" htmlFor="message">
               Message
             </label>
+
             <textarea
               id="message"
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Message"
               rows={2}
+              required
               className="w-full resize-none border-b border-[#BF9874] bg-transparent text-sm outline-none placeholder:italic placeholder:text-gray-500 lg:text-base archivo"
             />
           </div>
@@ -115,12 +201,19 @@ const InquirySection: React.FC = () => {
           <div className="mt-10 flex justify-center">
             <button
               type="submit"
+              disabled={loading}
               className="group relative inline-flex items-center justify-center overflow-hidden border border-[#001025] px-8 py-2.5 tracking-tighter text-white"
             >
               <span className="absolute h-0 w-0 rounded-full bg-[#001025] transition-all duration-500 ease-out group-hover:h-76 group-hover:w-76" />
+
               <span className="absolute inset-0 h-full w-full border border-[#001025] bg-[#FFF] opacity-10" />
+
               <span className="relative flex items-center justify-center gap-2 text-sm font-bold text-[#001025] group-hover:text-white md:text-base archivo">
-                <span>REQUEST AN APPOINTMENT</span>
+                <span>
+                  {loading
+                    ? "Sending..."
+                    : "REQUEST AN APPOINTMENT"}
+                </span>
               </span>
             </button>
           </div>

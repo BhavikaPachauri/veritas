@@ -247,7 +247,7 @@ const ExpertiseItemWrapper: React.FC<Item> = ({
               {description}
             </p>
 
-            {/* Gold arrow */}
+            
             <div
               className="relative flex-shrink-0"
               style={{
@@ -274,10 +274,9 @@ const FieldsOfExpertise: React.FC = () => {
       id="services"
       className="relative w-full bg-[#001025] archivo py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 overflow-hidden"
     >
-      {/* Background decorative image */}
       <div className="hidden md:block absolute right-0 bottom-0">
         <img
-          src="/img/img7.png"
+          src="/img/img7.webp"
           alt="background"
           className="object-contain w-[400px] md:w-[700px]"
         />
